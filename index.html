@@ -415,6 +415,24 @@
     text-align: center; margin-top: 32px; font-size: 13px; color: var(--mv-text-muted);
   }
   .stories-source a { color: var(--mv-brand); text-decoration: underline; font-weight: 600; }
+
+  /* Tighten cumulative whitespace — production gutter is too generous when 5 sections stack */
+  section.pb-Container.mv-section__gutter { padding-top: 56px; padding-bottom: 56px; }
+  @media (max-width: 768px) {
+    section.pb-Container.mv-section__gutter { padding-top: 40px; padding-bottom: 40px; }
+  }
+  /* When two adjacent sections share white-ish backgrounds, collapse the seam */
+  section.wound + section.bonuses { padding-top: 32px; }
+  section.bonuses + section.stories { padding-top: 32px; }
+  section.stories + section.upgrade-now { padding-top: 32px; }
+  /* Hero already has internal pb-12 lg_pb-16; reduce next section's top padding */
+  section.hero + section.wound { padding-top: 40px; }
+  /* Trim oversized internal section header margins */
+  section.bonuses .mb-12 { margin-bottom: 32px !important; }
+  section.stories .mb-10 { margin-bottom: 28px !important; }
+  section.upgrade-now .mb-10 { margin-bottom: 24px !important; }
+  /* CTA breathing room — was mt-12 = 48px, dial back */
+  section.bonuses .mt-12, section.stories .mt-12 { margin-top: 32px !important; }
 </style>
 </head>
 <body class="bg-white">
@@ -509,7 +527,8 @@
 <section data-name="The Wound" class="pb-Container wound min-h-fit mv-section__gutter wound-bg">
   <div class="mv-container min-h-fit">
     <p class="wound-quote">
-      You said you want to manifest wealth. But you also said the block is <em>"I don't deserve it,"</em> or you struggle to charge what you're worth, or money comes and goes, or you sabotage just before the breakthrough. <strong>That's not a faith problem — it's wiring.</strong> Installed before you were 7, reinforced by every almost-miss since. <em>The Wealth Recoding Room is where it gets rewired.</em>
+      You said you want wealth. But money slips through. You undercharge. You sabotage right before the breakthrough. A quiet voice says <em>"who am I to have this?"</em><br/><br/>
+      <strong>That's not a mindset problem. It's wiring</strong> — installed before you turned 7, reinforced by every almost-miss since. No vision board fixes wiring. <em>The Wealth Recoding Room does.</em>
     </p>
   </div>
 </section>
