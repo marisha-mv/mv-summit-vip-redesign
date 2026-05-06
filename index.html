@@ -60,27 +60,28 @@
   .countdown-unit { background: rgba(255,255,255,0.12); padding: 4px 8px; border-radius: 5px; min-width: 36px; text-align: center; font-size: 14px; }
   .countdown-unit-label { font-size: 9px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.7; display: block; line-height: 1; margin-top: 1px; }
 
-  /* CTAs — single brand color, no animation */
+  /* CTAs — orange brand button matching the order menu */
   .vip-cta {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    background: var(--mv-brand);
+    background: linear-gradient(180deg, #ff8a1f 0%, #ff7800 100%);
     color: #fff !important;
-    font-weight: 600; font-size: 17px;
+    font-weight: 700; font-size: 17px;
     padding: 18px 38px;
     border-radius: 999px;
     text-decoration: none !important;
-    box-shadow: 0 6px 18px rgba(122,18,212,0.22);
+    box-shadow: 0 8px 22px rgba(255,120,0,0.32), inset 0 1px 0 rgba(255,255,255,0.25);
     transition: background .15s, transform .12s, box-shadow .12s;
     border: none; cursor: pointer; line-height: 1;
   }
-  .vip-cta:hover { background: var(--mv-brand-content, #680fb4); transform: translateY(-1px); box-shadow: 0 10px 24px rgba(122,18,212,0.3); }
+  .vip-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(255,120,0,0.42), inset 0 1px 0 rgba(255,255,255,0.25); }
   .vip-cta-block { display: block; width: 100%; text-align: center; }
   .vip-cta-mega { font-size: 18px; padding: 20px 46px; }
 
-  /* Big purple badges */
+  /* Soft yellow badges — clearly visible but not button-like */
   .tr-badge {
     display: inline-block;
-    background: var(--mv-brand-light); color: var(--mv-brand);
+    background: #fff0b8;
+    color: #6b4500;
     font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
     padding: 8px 18px; border-radius: 999px;
   }
@@ -135,8 +136,50 @@
   }
   .hero-teachers-stack img:first-child { margin-left: 0; }
 
-  /* Wound — TR style: dramatic single-column emotional copy */
-  .wound-bg { background: var(--mv-grey-100); }
+  /* Wound — bold callout block, "Does this sound like you?" framing */
+  .wound-bg { background: linear-gradient(180deg, #faf6ff 0%, #f3eaff 100%); }
+  .wound-callout {
+    max-width: 820px; margin: 0 auto;
+    background: #fff;
+    border-left: 6px solid var(--mv-brand);
+    border-radius: 0 18px 18px 0;
+    padding: 36px 44px;
+    box-shadow: 0 12px 40px rgba(122,18,212,0.10), 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .wound-eyebrow {
+    display: inline-block;
+    font-size: 12px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--mv-brand);
+    margin-bottom: 14px;
+  }
+  .wound-headline {
+    font-size: clamp(26px, 3.4vw, 38px); line-height: 1.15;
+    letter-spacing: -0.02em; font-weight: 800;
+    color: var(--mv-text); margin: 0 0 20px;
+  }
+  .wound-list {
+    list-style: none; padding: 0; margin: 0 0 22px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .wound-list li {
+    font-size: 17px; line-height: 1.45; color: var(--mv-text);
+    padding-left: 28px; position: relative; font-weight: 500;
+  }
+  .wound-list li::before {
+    content: '✓'; position: absolute; left: 0; top: 0;
+    color: var(--mv-brand); font-weight: 800; font-size: 18px;
+  }
+  .wound-close {
+    font-size: 18px; line-height: 1.5; color: var(--mv-text);
+    font-weight: 600; margin: 22px 0 0; padding-top: 22px;
+    border-top: 1px solid var(--mv-grey-150);
+  }
+  .wound-close strong { color: var(--mv-brand); font-weight: 800; }
+  .wound-close em { font-style: italic; color: var(--mv-text); }
+  @media (max-width: 720px) {
+    .wound-callout { padding: 28px 24px; border-radius: 0 14px 14px 0; }
+    .wound-list li { font-size: 16px; }
+  }
   .wound-quote {
     font-size: clamp(24px, 3vw, 36px);
     line-height: 1.3;
@@ -345,8 +388,111 @@
   @media (max-width: 720px) { .guarantee-icon { margin: 0 auto; } }
 
   /* Order menu */
+  /* Order section — Mindvalley original "Level Up" DNA: teal gradient + white inner card + orange CTA */
   .order-bg {
-    background: linear-gradient(180deg, var(--mv-brand-light) 0%, #fff 100%);
+    background: linear-gradient(120deg, #84c5cf 0%, #a5d4d8 35%, #c1dee0 65%, #84c5cf 100%);
+    position: relative;
+  }
+  .order-shell {
+    background: linear-gradient(180deg, #ffffff 0%, #eaf6f8 100%);
+    border-radius: 28px;
+    padding: 56px 64px;
+    max-width: 1140px; margin: 0 auto;
+    box-shadow: 0 20px 50px rgba(20,80,90,0.10), 0 1px 4px rgba(0,0,0,0.04);
+  }
+  @media (max-width: 720px) { .order-shell { padding: 32px 24px; border-radius: 20px; } }
+
+  .order-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 880px) { .order-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .order-left { color: var(--mv-text); }
+  .order-h2 {
+    font-size: clamp(34px, 4.4vw, 52px); line-height: 1.02;
+    letter-spacing: -0.025em; font-weight: 800; color: #14202a;
+    margin: 0 0 28px; position: relative;
+  }
+  .order-h2::before {
+    content: ''; position: absolute; left: -2px; top: 0; width: 4px; height: 38%;
+    background: #c8f0f5; border-radius: 2px;
+  }
+  ul.order-stack {
+    list-style: none !important; padding: 0 !important; margin: 0 !important;
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  ul.order-stack li {
+    list-style: none !important;
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 18px; color: #1a242e; font-weight: 500; line-height: 1.4;
+    padding-left: 0 !important;
+  }
+  ul.order-stack li::before, ul.order-stack li::marker { content: none !important; display: none !important; }
+  .order-stack li .check {
+    flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--mv-brand);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: 800; font-size: 13px;
+    margin-top: 2px;
+  }
+  .order-stack li strong { font-weight: 700; color: #14202a; }
+
+  /* RIGHT side — pricing card + CTA */
+  .order-right { display: flex; flex-direction: column; gap: 18px; }
+  .order-price-card {
+    background: #fff; border-radius: 18px; overflow: hidden;
+    box-shadow: 0 12px 32px rgba(20,80,90,0.10);
+    position: relative;
+  }
+  .order-price-banner {
+    background: var(--mv-brand);
+    color: #fff;
+    text-align: center; padding: 12px 20px;
+    font-size: 14px; font-weight: 600; letter-spacing: 0.02em;
+  }
+  .order-price-body { padding: 28px 32px; }
+  .order-prices { display: flex; align-items: baseline; gap: 16px; margin-bottom: 14px; }
+  .order-strike-num {
+    font-size: 36px; font-weight: 800; color: #c4c8cf;
+    text-decoration: line-through; text-decoration-thickness: 3px;
+    line-height: 1; letter-spacing: -0.02em;
+  }
+  .order-now-num {
+    font-size: 64px; font-weight: 800; color: #14202a;
+    line-height: 0.95; letter-spacing: -0.04em;
+  }
+  .order-now-label {
+    font-size: 14px; color: #4a5562; line-height: 1.5; margin: 0; font-weight: 500;
+  }
+
+  .order-cta-orange {
+    display: block; width: 100%;
+    background: linear-gradient(180deg, #ff8a1f 0%, #ff7800 100%);
+    color: #fff; text-align: center;
+    padding: 20px 28px; border-radius: 999px;
+    font-size: 18px; font-weight: 700; letter-spacing: 0.01em;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(255,120,0,0.32), inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .order-cta-orange:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(255,120,0,0.42), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+
+  .order-payments {
+    display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+    margin-top: 6px;
+  }
+  .order-payments .pay {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 36px; min-width: 56px; padding: 0 12px;
+    background: #fff; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .order-secure-line {
+    text-align: center; font-size: 12px; color: #4a5562; line-height: 1.5;
+    margin-top: 8px; max-width: 360px; margin-left: auto; margin-right: auto;
   }
   .vip-order { max-width: 580px; margin: 0 auto; }
   .vip-order-card {
@@ -424,23 +570,186 @@
   }
   .stories-source a { color: var(--mv-brand); text-decoration: underline; font-weight: 600; }
 
-  /* Tighten cumulative whitespace — production gutter is too generous when 5 sections stack */
-  section.pb-Container.mv-section__gutter { padding-top: 56px; padding-bottom: 56px; }
-  @media (max-width: 768px) {
-    section.pb-Container.mv-section__gutter { padding-top: 40px; padding-bottom: 40px; }
+  /* ============================================================
+     NUCLEAR WHITESPACE RESET — strip every section to a controlled scale.
+     Production Storyblok CSS injects padding via .pb-Container, .mv-section__gutter,
+     and the pt-/pb- utilities. We zero them out and re-apply our own scale.
+     ============================================================ */
+
+  /* Strip ALL section-level vertical padding AND margins regardless of utility classes */
+  body section.pb-Container {
+    padding-top: 0 !important; padding-bottom: 0 !important;
+    margin-top: 0 !important; margin-bottom: 0 !important;
   }
-  /* When two adjacent sections share white-ish backgrounds, collapse the seam */
-  section.wound + section.bonuses { padding-top: 32px; }
-  section.bonuses + section.stories { padding-top: 32px; }
-  section.stories + section.upgrade-now { padding-top: 32px; }
-  /* Hero already has internal pb-12 lg_pb-16; reduce next section's top padding */
-  section.hero + section.wound { padding-top: 40px; }
-  /* Trim oversized internal section header margins */
-  section.bonuses .mb-12 { margin-bottom: 32px !important; }
-  section.stories .mb-10 { margin-bottom: 28px !important; }
-  section.upgrade-now .mb-10 { margin-bottom: 24px !important; }
-  /* CTA breathing room — was mt-12 = 48px, dial back */
-  section.bonuses .mt-12, section.stories .mt-12 { margin-top: 32px !important; }
+  body section.pb-Container > div[class*="pt-"],
+  body section.pb-Container > div[class*="pb-"],
+  body section.pb-Container > div[class*="py-"],
+  body section.pb-Container > div[class*="mt-"],
+  body section.pb-Container > div[class*="mb-"] {
+    padding-top: 0 !important; padding-bottom: 0 !important;
+    margin-top: 0 !important; margin-bottom: 0 !important;
+  }
+  /* Force background to fill the entire section box (overrides any production white bg) */
+  body section.hero { background:
+    radial-gradient(60% 70% at 100% 0%, rgba(155,55,242,0.18), transparent 60%),
+    radial-gradient(50% 50% at 0% 100%, rgba(247,44,132,0.12), transparent 60%),
+    #faf6ff !important;
+  }
+  body section.hero > div { background: transparent !important; }
+  body section.wound { background: linear-gradient(180deg, #faf6ff 0%, #f3eaff 100%) !important; }
+  body section.bonuses { background: linear-gradient(180deg, #f3eaff 0%, #faf6ff 100%) !important; }
+  body section.stories { background: #ffffff !important; }
+
+  /* Top chrome — header / countdown / breadcrumb completely flush */
+  header.vip-topbar { padding-top: 0 !important; padding-bottom: 0 !important; margin: 0 !important; }
+  body section.countdown { margin: 0 !important; padding: 0 !important; }
+  body section.breadcrumb { margin: 0 !important; padding: 0 !important; }
+  /* Nuke the nested inner section + every wrapper inside the breadcrumb */
+  body section.breadcrumb > section,
+  body section.breadcrumb > section > div,
+  body section.breadcrumb section.progress-bar,
+  body section.breadcrumb .upsell-bar-container { margin: 0 !important; padding: 0 !important; }
+  /* Chevron cells keep just enough internal padding to give the bar height */
+  body section.breadcrumb .mv-progress-bar { padding-top: 14px !important; padding-bottom: 14px !important; }
+  body section.countdown .countdown-bar { margin: 0 !important; }
+
+  /* Re-apply controlled vertical rhythm via inner wrappers */
+  body section.hero { padding-top: 32px !important; padding-bottom: 24px !important; }
+  body section.wound { padding: 32px 0 !important; }
+  body section.bonuses { padding: 28px 0 36px !important; }
+  body section.stories { padding: 28px 0 36px !important; }
+  body section.upgrade-now { padding: 40px 0 40px !important; }
+  body section.skip { padding: 4px 0 8px !important; }
+  body section.faqs { padding: 32px 0 40px !important; }
+  body section.faqs > div { padding: 0 !important; }
+
+  @media (max-width: 768px) {
+    body section.hero > div { padding: 24px 0 20px !important; }
+    body section.wound { padding: 24px 0 !important; }
+    body section.bonuses { padding: 20px 0 24px !important; }
+    body section.stories { padding: 20px 0 24px !important; }
+    body section.upgrade-now { padding: 28px 0 !important; }
+    body section.faqs { padding: 24px 0 28px !important; }
+  }
+
+  /* Trim ALL internal section-header utility margins that compound */
+  body section.bonuses .mb-12,
+  body section.stories .mb-10,
+  body section.upgrade-now .mb-10 { margin-bottom: 20px !important; }
+  body section.bonuses .mt-12,
+  body section.stories .mt-12 { margin-top: 20px !important; }
+  body section.bonuses .mt-6,
+  body section.stories .mt-5 { margin-top: 10px !important; }
+
+  /* Stories source line — pull tight */
+  .stories-source { margin-top: 18px !important; }
+
+  /* ============================================================
+     MOBILE OPTIMIZATION — comprehensive pass for ≤640px
+     ============================================================ */
+  @media (max-width: 640px) {
+    /* Top chrome — countdown bar wraps, smaller font */
+    .countdown-bar { padding: 10px 14px; font-size: 12px; gap: 8px; line-height: 1.35; }
+    .countdown-unit { min-width: 30px; font-size: 12px; padding: 3px 6px; }
+    .countdown-unit-label { font-size: 8px; }
+
+    /* Breadcrumb chevrons — labels hidden via existing utility, just tighten */
+    body section.breadcrumb .mv-progress-bar { padding-top: 10px !important; padding-bottom: 10px !important; }
+    .progress-bar--num { font-size: 13px; }
+
+    /* Hero — tighter padding, banner side margins */
+    body section.hero { padding-top: 22px !important; padding-bottom: 20px !important; }
+    .hero-h1 { font-size: 34px !important; line-height: 1.05 !important; }
+    body section.hero .pb-markdown.mv-type--title6 { font-size: 16px !important; line-height: 1.5 !important; }
+
+    /* Hero CTA — full-width-ish on mobile, easier tap */
+    .vip-cta { width: 100%; max-width: 320px; padding: 16px 24px; font-size: 16px; }
+    .vip-cta-mega { font-size: 16px; padding: 18px 24px; }
+
+    /* Badges — smaller letter-spacing for narrow screens */
+    .tr-badge { font-size: 11px; padding: 7px 14px; letter-spacing: 0.06em; }
+
+    /* Wound callout — tighter padding, smaller headline */
+    body section.wound { padding: 28px 0 !important; }
+    .wound-callout { padding: 24px 20px; border-radius: 0 12px 12px 0; }
+    .wound-headline { font-size: 22px !important; line-height: 1.2 !important; }
+    .wound-list li { font-size: 15px; padding-left: 24px; }
+    .wound-list li::before { font-size: 16px; }
+    .wound-close { font-size: 15px; padding-top: 18px; margin-top: 18px; }
+
+    /* Bonuses — tighter section header + cards */
+    body section.bonuses { padding: 28px 0 32px !important; }
+    body section.bonuses h2 { font-size: 26px !important; line-height: 1.15 !important; }
+    body section.bonuses p { font-size: 15px; }
+    .bonus-card-visual { min-height: 200px; }
+    .bonus-card-visual-content { padding: 22px 20px 20px; min-height: 220px; }
+    .bonus-card-name { font-size: 28px !important; }
+    .bonus-card-num { font-size: 10px; padding: 5px 10px; }
+    .bonus-card-value { font-size: 12px; padding: 8px 12px; }
+    .bonus-card-value strong { font-size: 15px; }
+    .bonus-card-body { padding: 22px 20px !important; }
+    .bonus-card-headline { font-size: 18px !important; }
+    .bonus-card-desc { font-size: 14px; }
+    .bonus-card-list li { font-size: 14px; }
+
+    /* Stories — tighter card padding */
+    body section.stories { padding: 28px 0 32px !important; }
+    body section.stories h2 { font-size: 24px !important; line-height: 1.2 !important; }
+    .story-card { padding: 22px 20px; gap: 14px; }
+    .story-card-photo { width: 56px; height: 56px; }
+    .story-card-name { font-size: 15px; }
+    .story-card-meta { font-size: 12px; }
+    .story-card-quote { font-size: 15px; line-height: 1.5; }
+    .story-card-result { font-size: 11px; padding: 5px 10px; }
+
+    /* Order menu — fully stack, smaller paddings, smaller numbers */
+    body section.upgrade-now { padding: 28px 0 32px !important; }
+    .order-shell { padding: 28px 20px !important; border-radius: 16px; }
+    .order-grid { gap: 24px !important; }
+    .order-h2 { font-size: 28px !important; line-height: 1.1 !important; margin-bottom: 20px !important; }
+    .order-stack li { font-size: 15px; gap: 10px; }
+    .order-stack li .check { width: 22px; height: 22px; font-size: 12px; }
+    .order-price-card { border-radius: 14px; }
+    .order-price-banner { padding: 10px 16px; font-size: 13px; }
+    .order-price-body { padding: 22px 22px; }
+    .order-strike-num { font-size: 28px; }
+    .order-now-num { font-size: 56px; }
+    .order-now-label { font-size: 13px; }
+    .order-cta-orange { padding: 16px 20px; font-size: 16px; }
+    .order-payments .pay { height: 32px; min-width: 48px; padding: 0 9px; }
+
+    /* Skip link */
+    .vip-skip { font-size: 13px; padding: 18px 16px; }
+
+    /* FAQ — single column, tighter */
+    body section.faqs { padding: 24px 0 28px !important; }
+    body section.faqs h2 { font-size: 24px; }
+    body section.faqs summary h3 { font-size: 16px !important; }
+    body section.faqs details p { font-size: 14px; line-height: 1.55; }
+
+    /* Footer */
+    .vip-footer { padding: 24px 16px; font-size: 12px; line-height: 1.7; }
+    .vip-topbar { padding: 10px 14px; }
+    .vip-topbar-meta { gap: 12px; font-size: 13px; }
+
+    /* Section header internal margins — pull tighter on mobile */
+    body section.bonuses .mb-12,
+    body section.stories .mb-10,
+    body section.upgrade-now .mb-10 { margin-bottom: 16px !important; }
+    body section.bonuses .mt-12,
+    body section.stories .mt-12 { margin-top: 18px !important; }
+  }
+
+  /* Even tighter for ≤380px (small phones) */
+  @media (max-width: 380px) {
+    .hero-h1 { font-size: 28px !important; }
+    .countdown-bar { font-size: 11px; padding: 8px 10px; }
+    .countdown-unit { min-width: 26px; padding: 2px 5px; }
+    .order-now-num { font-size: 48px; }
+    .order-strike-num { font-size: 24px; }
+    .wound-headline { font-size: 20px !important; }
+    .bonus-card-name { font-size: 24px !important; }
+  }
 </style>
 </head>
 <body class="bg-white">
@@ -459,7 +768,7 @@
 <!-- COUNTDOWN — Yellow Mindvalley brand bar (matches production) -->
 <section data-name="Countdown" class="pb-Container countdown min-h-fit mv-top__banner">
   <div class="countdown-bar">
-    <span><strong>One last step</strong> — upgrade to VIP for only $1. This offer expires when you leave this page.</span>
+    <span><strong>One last step</strong> — upgrade to VIP for only $29. This offer expires when you leave this page.</span>
     <span class="countdown-units" id="countdown">
       <span class="countdown-unit">00<span class="countdown-unit-label">D</span></span>
       <span class="countdown-unit">00<span class="countdown-unit-label">H</span></span>
@@ -482,7 +791,7 @@
       <div class="mv-progress-bar w-1/3 lg_text-center md_py-6 flex items-center justify-center orange">
         <span class="progress-bar--num">2</span>
         <div class="progress-bar--label label text-cool-grey-500 mv-type--caption mt-0">
-          <span class="hidden md_inline-block">Add VIP Access — $1</span>
+          <span class="hidden md_inline-block">Add VIP Access — $29</span>
         </div>
       </div>
       <div class="mv-progress-bar w-1/3 lg_text-center md_py-6 flex items-center justify-center">
@@ -523,7 +832,7 @@
 
       <!-- CTA -->
       <div class="flex flex-col items-center gap-4 mt-10">
-        <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $1</a>
+        <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $29</a>
         <span style="font-size: 13px; color: var(--mv-text-muted);">Closes when you leave this page · Goes to $99 after</span>
       </div>
 
@@ -534,10 +843,20 @@
 <!-- WOUND — one tight paragraph with survey data -->
 <section data-name="The Wound" class="pb-Container wound min-h-fit mv-section__gutter wound-bg">
   <div class="mv-container min-h-fit">
-    <p class="wound-quote">
-      You said you want wealth. But money slips through. You undercharge. You sabotage right before the breakthrough. A quiet voice says <em>"who am I to have this?"</em><br/><br/>
-      <strong>That's not a mindset problem. It's wiring</strong> — installed before you turned 7, reinforced by every almost-miss since. No vision board fixes wiring. <em>The Wealth Recoding Room does.</em>
-    </p>
+    <div class="wound-callout">
+      <span class="wound-eyebrow">Does this sound like you?</span>
+      <h2 class="wound-headline">Your 2026 goal is to manifest more wealth — but something inside whispers <em style="color: var(--mv-brand); font-style: italic;">"who am I to have this?"</em></h2>
+      <ul class="wound-list">
+        <li>You're scared to charge more for your work — even when you know you're worth it.</li>
+        <li>Asking for a raise feels almost physically uncomfortable.</li>
+        <li>You work twice as hard as everyone else, and the money still slips through.</li>
+        <li>The moment money lands in your account, an unexpected bill shows up to drain it.</li>
+        <li>You sabotage right before the breakthrough — every single time.</li>
+      </ul>
+      <p class="wound-close">
+        These are the money blocks keeping you stuck from your 2026 wealth goal. <strong>This is not a mindset problem — it's wiring.</strong> Installed before you turned 7. Reinforced every time since. No vision board fixes wiring. <em>The Wealth Recoding Room does.</em>
+      </p>
+    </div>
   </div>
 </section>
 
@@ -562,9 +881,9 @@
           <div class="bonus-card-visual">
             <img src="assets/banners/bonus-1-cosmic.jpg" alt="" />
             <div class="bonus-card-visual-content">
-              <span class="bonus-card-num">Session 1 · The Headline Experience</span>
+              <span class="bonus-card-num">Session 1 · The Main Room</span>
               <h3 class="bonus-card-name">The Wealth Recoding Room</h3>
-              <span class="bonus-card-value">Worth <strong>$1,500</strong> · live with Vishen &amp; Regan</span>
+              <span class="bonus-card-value">Worth <strong>$1,000</strong> · live with Vishen &amp; Regan</span>
             </div>
           </div>
           <div class="bonus-card-body">
@@ -592,20 +911,20 @@
           <div class="bonus-card-visual">
             <img src="assets/banners/bonus-2-light.jpg" alt="" />
             <div class="bonus-card-visual-content">
-              <span class="bonus-card-num">Session 2 · Intimate Q&amp;A</span>
-              <h3 class="bonus-card-name">2× Private VIP Q&amp;A</h3>
-              <span class="bonus-card-value">Worth <strong>$2,000</strong> · direct teacher access</span>
+              <span class="bonus-card-num">Session 2 · Intimate Q&amp;A Sessions</span>
+              <h3 class="bonus-card-name">The Private Recode Sessions</h3>
+              <span class="bonus-card-value">Worth <strong>$899</strong> · 2× intimate sessions</span>
             </div>
           </div>
           <div class="bonus-card-body">
-            <h4 class="bonus-card-headline">Two private sessions where you ask Vishen &amp; Regan about <em>YOUR</em> exact wealth block.</h4>
+            <h4 class="bonus-card-headline">Two intimate sessions where Vishen &amp; Regan recode <em>YOUR</em> exact block — by name, live.</h4>
             <p class="bonus-card-desc">
-              Whatever's been keeping you stuck — bring it. Get it answered live in a small VIP-only room.
+              Bring the pattern that's been running you. Get it dissolved live in a small VIP-only room of committed manifestors.
             </p>
             <ul class="bonus-card-list">
-              <li><em>"I struggle to charge what I'm worth"</em> — get unstuck</li>
-              <li><em>"Money comes and goes"</em> — fix the receiving wire</li>
-              <li><em>"I sabotage just before the breakthrough"</em> — name the pattern, dissolve it</li>
+              <li><em>"I struggle to charge what I'm worth"</em> — recode the worth wire</li>
+              <li><em>"Money comes and goes"</em> — repair the receiving channel</li>
+              <li><em>"I sabotage right before the breakthrough"</em> — name it, dissolve it</li>
               <li>Two live sessions · Day 1 evening + Day 2 · HD recordings included</li>
             </ul>
             <div class="bonus-card-teachers">
@@ -625,7 +944,7 @@
             <div class="bonus-card-visual-content">
               <span class="bonus-card-num">Session 3 · The Private Room</span>
               <h3 class="bonus-card-name">The VIP Lounge</h3>
-              <span class="bonus-card-value">Worth <strong>$500</strong> · Master Manifestor community</span>
+              <span class="bonus-card-value">Worth <strong>$299</strong> · Master Manifestor community</span>
             </div>
           </div>
           <div class="bonus-card-body">
@@ -645,7 +964,7 @@
     </div>
 
     <div class="text-center mt-12">
-      <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $1</a>
+      <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $29</a>
     </div>
   </div>
 </section>
@@ -726,66 +1045,57 @@
     </p>
 
     <div class="text-center mt-12">
-      <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $1</a>
+      <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $29</a>
     </div>
   </div>
 </section>
 
-<!-- ORDER MENU -->
+<!-- ORDER MENU — original Mindvalley "Level up" DNA · teal gradient -->
 <section id="apply-now" data-name="Upgrade now" class="pb-Container upgrade-now min-h-fit order-bg mv-section__gutter pb-navigable">
   <div class="mv-container min-h-fit">
-    <div class="text-center mb-10">
-      <span class="tr-badge">Your one-click decision</span>
-      <div class="pb-markdown mt-5 mb-3">
-        <h2 style="font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.022em; font-weight: 700; margin: 0 0 12px;">Add VIP Access for $1.</h2>
-      </div>
-    </div>
+    <div class="order-shell">
+      <div class="order-grid">
 
-    <div class="vip-order">
-      <div class="vip-order-card">
-        <div class="pb-markdown mv-type--titlebold4 mb-1" style="font-weight: 800;"><p>VIP Access · Wealth Recoding Room</p></div>
-        <div class="mv-type--caption text-cool-grey-500" style="margin-bottom: 22px; font-weight: 500;">Only on this page · Goes to $99 after this page closes</div>
-
-        <div class="vip-order-included">
-          <div class="vip-order-included-label">What's included</div>
-          <ul>
-            <li><strong>The Wealth Recoding Room</strong> — private session w/ Vishen &amp; Regan</li>
-            <li><strong>2× Private VIP Q&amp;A</strong> — get your specific blocker dissolved live</li>
-            <li><strong>The VIP Lounge</strong> — private Zoom room + 30-day replays</li>
+        <!-- LEFT: Headline + value bullets -->
+        <div class="order-left">
+          <h2 class="order-h2">Level Up Your Summit Experience</h2>
+          <ul class="order-stack">
+            <li><span class="check">✓</span><span><strong>The Wealth Recoding Room</strong> — live with Vishen &amp; Regan</span></li>
+            <li><span class="check">✓</span><span><strong>2× Private Recode Sessions</strong> — your specific block, dissolved live</span></li>
+            <li><span class="check">✓</span><span><strong>The VIP Lounge</strong> — dedicated private Zoom room + 30-day replays</span></li>
           </ul>
         </div>
 
-        <div class="vip-order-strike">$99</div>
-        <div class="vip-order-now">$1</div>
-        <div class="vip-order-renewal">For the next 4 minutes only · then $99</div>
+        <!-- RIGHT: Price card + orange CTA -->
+        <div class="order-right">
+          <div class="order-price-card">
+            <div class="order-price-banner">VIP Access · Wealth Recoding Room</div>
+            <div class="order-price-body">
+              <div class="order-prices">
+                <span class="order-strike-num">$99</span>
+                <span class="order-now-num">$29</span>
+              </div>
+              <p class="order-now-label">Only available on this page. Goes to $99 after this page.</p>
+            </div>
+          </div>
 
-        <a href="#" class="vip-cta vip-cta-block vip-cta-mega">Add VIP Access for $1</a>
-      </div>
+          <a href="#" class="order-cta-orange">Upgrade to VIP access</a>
 
-      <div class="vip-order-payments">
-        <span class="vip-order-pay" style="color:#1A1F71;font-weight:900;font-style:italic;font-size:13px;letter-spacing:-0.5px;">VISA</span>
-        <span class="vip-order-pay">
-          <span style="display:inline-flex;align-items:center;">
-            <span style="width:14px;height:14px;border-radius:50%;background:#EB001B;margin-right:-5px;"></span>
-            <span style="width:14px;height:14px;border-radius:50%;background:#F79E1B;opacity:.85;"></span>
-          </span>
-        </span>
-        <span class="vip-order-pay" style="color:#fff;background:#006FCF;font-weight:900;font-size:8px;letter-spacing:-0.2px;line-height:1;text-align:center;padding:4px 8px;">AMERICAN<br/>EXPRESS</span>
-        <span class="vip-order-pay" style="color:#FF6F00;font-weight:900;font-size:11px;letter-spacing:-0.3px;">DISCOVER</span>
-        <span class="vip-order-pay">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-          <span style="font-size:11px;color:#000;font-weight:600;margin-left:3px;">Pay</span>
-        </span>
-        <span class="vip-order-pay"><span style="font-size:13px;font-weight:500;color:#5F6368;"><span style="color:#4285F4;">G</span> Pay</span></span>
-      </div>
+          <div class="order-payments">
+            <span class="pay" style="color:#1A1F71;font-weight:900;font-style:italic;font-size:13px;letter-spacing:-0.5px;">VISA</span>
+            <span class="pay">
+              <span style="display:inline-flex;align-items:center;">
+                <span style="width:14px;height:14px;border-radius:50%;background:#EB001B;margin-right:-5px;"></span>
+                <span style="width:14px;height:14px;border-radius:50%;background:#F79E1B;opacity:.85;"></span>
+              </span>
+            </span>
+            <span class="pay" style="color:#fff;background:#006FCF;font-weight:900;font-size:8px;letter-spacing:-0.2px;line-height:1;text-align:center;padding:4px 8px;">AMERICAN<br/>EXPRESS</span>
+            <span class="pay" style="color:#FF6F00;font-weight:900;font-size:11px;letter-spacing:-0.3px;">DISCOVER</span>
+            <span class="pay" style="color:#003087;font-weight:800;font-size:13px;letter-spacing:-0.3px;font-style:italic;"><span style="color:#003087;">Pay</span><span style="color:#009cde;">Pal</span></span>
+          </div>
+          <p class="order-secure-line">VAT may apply based on your billing address. All orders are processed securely.</p>
+        </div>
 
-      <div class="vip-order-stripe">Powered by <span style="color:#635BFF;font-weight:700;letter-spacing:-0.4px;">stripe</span></div>
-
-      <div class="vip-order-secure">
-        <span class="vip-order-secure-icon">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </span>
-        <span>VAT may apply based on billing address. All orders processed on a secured server.</span>
       </div>
     </div>
   </div>
@@ -809,9 +1119,9 @@
       <div class="lg_col-span-3">
 
         <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Wait — $1? What's the catch?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Wait — $29? What's the catch?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>No catch. We'd rather you say yes for $1 and feel the work change something in you, than walk away because of price. After this page closes, VIP access returns to $99 (its real price). You're getting it for $1 because you're here, right now, in the moment of decision.</p>
+            <p>No catch. We'd rather you say yes for $29 and feel the work change something in you, than walk away because of price. After this page closes, VIP access returns to $99 (its real price). You're getting it for $29 because you're here, right now, in the moment of decision.</p>
           </div>
         </details>
 
