@@ -188,10 +188,24 @@
   .bonus-card-visual {
     background: linear-gradient(135deg, var(--mv-brand-dark) 0%, var(--mv-brand) 100%);
     color: #fff;
-    padding: 32px 28px;
-    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 0;
+    display: block;
     position: relative; overflow: hidden;
     min-height: 260px;
+  }
+  .bonus-card-visual img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block; position: absolute; inset: 0;
+  }
+  .bonus-card-visual::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(79,12,138,0.65) 0%, rgba(122,18,212,0.45) 100%);
+  }
+  .bonus-card-visual-content {
+    position: relative; z-index: 1;
+    padding: 32px 28px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    height: 100%; min-height: 260px;
   }
   .bonus-card-num {
     font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
@@ -379,10 +393,10 @@
   </div>
 </header>
 
-<!-- COUNTDOWN -->
+<!-- COUNTDOWN — Yellow Mindvalley brand bar (matches production) -->
 <section data-name="Countdown" class="pb-Container countdown min-h-fit mv-top__banner">
   <div class="countdown-bar">
-    <span><strong>$1 Wealth Codes upgrade</strong> — closes when you leave this page</span>
+    <span><strong>One last step</strong> — upgrade to VIP for only $1. This offer expires when you leave this page.</span>
     <span class="countdown-units" id="countdown">
       <span class="countdown-unit">00<span class="countdown-unit-label">D</span></span>
       <span class="countdown-unit">00<span class="countdown-unit-label">H</span></span>
@@ -423,54 +437,42 @@
   <div class="pt-8 lg_pt-12 pb-12 lg_pb-16 min-h-fit">
     <div class="w-full relative mv-container min-h-fit">
 
-      <!-- Eyebrow badge -->
-      <div class="pb-6 flex items-center justify-center min-h-fit">
-        <span class="tr-badge">VIP Upgrade · This page only</span>
+      <!-- Eyebrow — survey callout -->
+      <div class="pb-4 flex items-center justify-center min-h-fit">
+        <span class="tr-badge">94% of you said your goal in 2026 is to manifest wealth</span>
       </div>
 
-      <!-- Headline -->
+      <!-- Pain-first headline -->
       <div class="pb-markdown min-h-fit md_text-center">
-        <h1 class="hero-h1">You came to manifest. <em>Add the Wealth Codes for $1.</em></h1>
+        <h1 class="hero-h1">If your goal is to <em>finally manifest wealth</em> — you want to be in this room.</h1>
       </div>
 
-      <!-- Subhead -->
-      <div class="pb-markdown min-h-fit mv-type--title6 md_text-center mt-6 mb-8 w-full md_w-3/4 mx-auto" style="font-size: 19px; line-height: 1.5;">
-        <p>You're in for the summit. <strong>Wealth Codes is the one extra thing that gets the deeper money work to actually land</strong> — three private VIP-only sessions with Vishen, Regan and Paul McKenna. For the next 15 minutes, $1.</p>
+      <!-- Subhead — names the wound + introduces the room -->
+      <div class="pb-markdown min-h-fit mv-type--title6 md_text-center mt-6 mb-8 w-full md_w-3/4 mx-auto" style="font-size: 19px; line-height: 1.55;">
+        <p>You said you want wealth. <strong>33% of you also said the block is "I don't deserve it"</strong> — wired before age 7, reinforced by every almost-miss since. <strong>The Wealth Recoding Room</strong> is where Vishen and Regan rewire that, in a small intimate room — for VIPs only.</p>
       </div>
 
-      <!-- Production VIP banner image -->
-      <div class="overflow-hidden rounded w-full md_w-4/5 mx-auto mt-4">
+      <!-- Production banner -->
+      <div class="overflow-hidden rounded-lg w-full md_w-4/5 mx-auto mt-4">
         <img src="assets/banners/wealth-recoding-room.png" alt="VIP Access · Wealth Recoding Room · Manifesting Summit"
-             class="rounded w-full" style="display: block; width: 100%; height: auto;" />
-      </div>
-
-      <!-- Caption -->
-      <div class="pb-markdown min-h-fit text-center mv-type--caption w-full md_w-3/4 mx-auto mt-4 mb-8">
-        <p style="color: var(--mv-text-muted);">Three extra private sessions with the world's leading wealth manifesting teachers — live.</p>
+             class="rounded-lg w-full" style="display: block; width: 100%; height: auto;" />
       </div>
 
       <!-- CTA -->
-      <div class="flex flex-col items-center gap-4 mt-8">
-        <a href="#apply-now" class="vip-cta vip-cta-mega">Add Wealth Codes — $1</a>
-        <span style="font-size: 13px; color: var(--mv-text-muted); display: inline-flex; align-items: center; gap: 8px;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          15-day money-back · One click refund
-        </span>
+      <div class="flex flex-col items-center gap-4 mt-10">
+        <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $1</a>
+        <span style="font-size: 13px; color: var(--mv-text-muted);">Closes when you leave this page · Goes to $99 after</span>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- WOUND — TR style emotional dramatic single-column -->
+<!-- WOUND — one tight paragraph with survey data -->
 <section data-name="The Wound" class="pb-Container wound min-h-fit mv-section__gutter wound-bg">
   <div class="mv-container min-h-fit">
     <p class="wound-quote">
-      You've manifested small things. You watch <strong>other people</strong> manifest the big ones — wealth, businesses, freedom. And quietly, a voice in you wonders: <em>"why does it work for them and not me?"</em>
-    </p>
-
-    <p class="wound-quote" style="margin-top: 28px;">
-      It's not your fault. <strong>Wealth has its own wiring</strong> — money trauma installed before you were 7, generational patterns, the body's "more = unsafe" reflex. <em>That's the layer affirmations don't reach.</em> And that's the layer the next 3 days are designed to rewire.
+      You said you want to manifest wealth. But you also said the block is <em>"I don't deserve it,"</em> or you struggle to charge what you're worth, or money comes and goes, or you sabotage just before the breakthrough. <strong>That's not a faith problem — it's wiring.</strong> Installed before you were 7, reinforced by every almost-miss since. <em>The Wealth Recoding Room is where it gets rewired.</em>
     </p>
   </div>
 </section>
@@ -490,54 +492,57 @@
 
     <div class="bonus-stack">
 
-      <!-- BONUS 1: THE WEALTH FREQUENCY ROOM (extra private session) -->
+      <!-- BONUS 1: THE WEALTH RECODING ROOM -->
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <span class="bonus-card-num">Extra Session #1</span>
-            <h3 class="bonus-card-name">The Wealth Recoding Room</h3>
-            <span class="bonus-card-value">Standalone value: <strong>$1,500</strong></span>
+            <img src="assets/banners/wealth-recoding-room.png" alt="Wealth Recoding Room" />
+            <div class="bonus-card-visual-content">
+              <span class="bonus-card-num">Session 1 · The Headline Experience</span>
+              <h3 class="bonus-card-name">The Wealth Recoding Room</h3>
+              <span class="bonus-card-value">Worth <strong>$1,500</strong> · live with Vishen &amp; Regan</span>
+            </div>
           </div>
           <div class="bonus-card-body">
-            <h4 class="bonus-card-headline">A <em>private extra session</em> on top of the summit — going DEEPER on <em>YOUR</em> wealth blocks.</h4>
+            <h4 class="bonus-card-headline">A small private room where Vishen &amp; Regan <em>recode the wiring</em> that's been blocking your wealth.</h4>
             <p class="bonus-card-desc">
-              This isn't part of the main summit. It's a <strong>private extra session — VIPs only</strong> — where Paul McKenna, Vishen, and Regan go beyond what's possible on the public stage. Money trauma installed before you were 7. Generational wealth patterns. The "I don't deserve it" wire. <span class="tr-italic">The deep work that needs a smaller, more intimate room to actually land.</span>
+              The patterns of generating and keeping wealth aren't a skill you learn — <strong>they're a wiring you carry.</strong> This is where Vishen and Regan step in and rewire it: the "I don't deserve it" loop, the generational money trauma, the body's reflex to push wealth away when it gets close.
             </p>
             <ul class="bonus-card-list">
-              <li><strong>Extra private session</strong> — not on the main summit stage</li>
-              <li>1-hour live wealth hypnotherapy with <strong>Paul McKenna, Ph.D.</strong> — dissolves money trauma at the subconscious</li>
-              <li>Wealth identity install with <strong>Vishen &amp; Regan</strong> — from "trying to manifest wealth" to "I AM someone wealth flows to"</li>
-              <li>Smaller, more intimate room — the deeper work the public stage can't hold</li>
+              <li>Recode the "I don't deserve it" wiring at the identity level</li>
+              <li>Dissolve generational wealth patterns running on autopilot</li>
+              <li>Install the wealth identity — small, intimate, VIP-only room</li>
             </ul>
             <div class="bonus-card-teachers">
-              <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
-              <img src="assets/teachers/vishen-large.webp" alt="Vishen" style="margin-left: -12px; border: 2px solid #fff;" />
+              <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
               <img src="assets/teachers/regan-large.webp" alt="Regan" style="margin-left: -12px; border: 2px solid #fff;" />
-              <span><strong style="color: var(--mv-text);">Paul McKenna · Vishen · Regan Hillyer</strong></span>
+              <span><strong style="color: var(--mv-text);">Vishen &amp; Regan Hillyer</strong> · live · VIP-only</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- BONUS 2: INTIMATE LIVE Q&A (extra private session) -->
+      <!-- BONUS 2: 2× INTIMATE LIVE Q&A -->
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <span class="bonus-card-num">Extra Session #2</span>
-            <h3 class="bonus-card-name">Intimate Live Q&amp;A</h3>
-            <span class="bonus-card-value">Standalone value: <strong>$2,000</strong></span>
+            <img src="assets/banners/speakers-lineup.jpg" alt="Live Q&A with Vishen and Regan" />
+            <div class="bonus-card-visual-content">
+              <span class="bonus-card-num">Session 2 · Intimate Q&amp;A</span>
+              <h3 class="bonus-card-name">2× Private VIP Q&amp;A</h3>
+              <span class="bonus-card-value">Worth <strong>$2,000</strong> · direct teacher access</span>
+            </div>
           </div>
           <div class="bonus-card-body">
-            <h4 class="bonus-card-headline">Two <em>private Q&amp;A sessions</em> — VIPs only — get intimate with Vishen and Regan about <strong>YOUR</strong> specific blocker.</h4>
+            <h4 class="bonus-card-headline">Two private sessions where you ask Vishen &amp; Regan about <em>YOUR</em> exact wealth block.</h4>
             <p class="bonus-card-desc">
-              Most people leave a summit with the same questions they came in with. <strong>Not VIPs.</strong> Two private extra Q&amp;A sessions — not on the main stage — where you ask Vishen and Regan directly about the exact blocker that's been keeping <em>you</em> stuck for years. <span class="tr-italic">The closest thing to a private session — without the $5,000+ price tag.</span>
+              Whatever's been keeping you stuck — bring it. Get it answered live in a small VIP-only room.
             </p>
             <ul class="bonus-card-list">
-              <li><strong>Two private extra sessions</strong> — Day 1 evening + Day 2 — VIPs only</li>
-              <li>Smaller room, intimate setting — your actual question gets heard</li>
-              <li>Submit your specific blocker; have it answered live by Vishen or Regan</li>
-              <li>Hear other VIPs' wealth blocks dissolved in real time (often more powerful than your own)</li>
-              <li>HD recordings included if you can't make it live</li>
+              <li><em>"I struggle to charge what I'm worth"</em> — get unstuck</li>
+              <li><em>"Money comes and goes"</em> — fix the receiving wire</li>
+              <li><em>"I sabotage just before the breakthrough"</em> — name the pattern, dissolve it</li>
+              <li>Two live sessions · Day 1 evening + Day 2 · HD recordings included</li>
             </ul>
             <div class="bonus-card-teachers">
               <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
@@ -548,29 +553,27 @@
         </div>
       </div>
 
-      <!-- BONUS 3: THE VIP LOUNGE (private room) -->
+      <!-- BONUS 3: VIP LOUNGE -->
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <span class="bonus-card-num">Private Container</span>
-            <h3 class="bonus-card-name">The VIP Lounge</h3>
-            <span class="bonus-card-value">Standalone value: <strong>$500</strong></span>
+            <img src="assets/banners/vip-banner.jpg" alt="VIP Lounge — private room for Master Manifestors" />
+            <div class="bonus-card-visual-content">
+              <span class="bonus-card-num">Session 3 · The Private Room</span>
+              <h3 class="bonus-card-name">The VIP Lounge</h3>
+              <span class="bonus-card-value">Worth <strong>$500</strong> · Master Manifestor community</span>
+            </div>
           </div>
           <div class="bonus-card-body">
-            <h4 class="bonus-card-headline">A <em>private Zoom room</em> for VIPs only — connect with the manifestors who chose to go all in.</h4>
+            <h4 class="bonus-card-headline">A private room for VIPs only — connect with <em>Master Manifestors</em>, not the general crowd.</h4>
             <p class="bonus-card-desc">
-              You become who you spend time with. The general summit room is open to everyone — including people just curious. <strong>The VIP Lounge is different.</strong> A private, smaller, intimate Zoom room where VIPs watch the summit together — chatting, connecting, supporting each other. <span class="tr-italic">Manifestors stepping into 7-figure identity. Founders. Coaches. Healers. Your tribe.</span>
+              You become who you spend time with. The general summit room is open to everyone. <strong>The VIP Lounge is different</strong> — a smaller private Zoom room of committed manifestors stepping into 7-figure identity.
             </p>
             <ul class="bonus-card-list">
-              <li><strong>Private VIP-only Zoom room</strong> — separate from the main summit room</li>
-              <li>Watch all 3 days alongside committed manifestors</li>
-              <li>Real-time chat with other VIPs — share insights, accountability, breakthroughs</li>
-              <li>Smaller, more intimate experience — the room behind the room</li>
-              <li>30-day HD replay access so the work integrates over time</li>
+              <li>Private VIP-only Zoom room — all 3 summit days</li>
+              <li>Real-time chat with other Master Manifestors</li>
+              <li>30-day HD replay access for integration</li>
             </ul>
-            <div class="bonus-card-teachers">
-              <span style="font-size: 14px; color: var(--mv-text-muted);"><strong style="color: var(--mv-text);">Available immediately upon upgrade</strong> · Active during all 3 summit days + 30 days after</span>
-            </div>
           </div>
         </div>
       </div>
@@ -578,24 +581,7 @@
     </div>
 
     <div class="text-center mt-12">
-      <a href="#apply-now" class="vip-cta vip-cta-mega">Add Wealth Codes — $1</a>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section data-name="Guarantee" class="pb-Container guarantee min-h-fit mv-section__gutter">
-  <div class="mv-container min-h-fit">
-    <div class="guarantee-card">
-      <div class="guarantee-icon">
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-      </div>
-      <div>
-        <div class="pb-markdown mv-type--title4 mb-2"><h3 style="font-weight: 800;">Risk literally nothing.</h3></div>
-        <div class="pb-markdown mv-type--body" style="font-size: 17px;">
-          <p>It's <strong>$1.</strong> Less than the tip on a coffee. Sit in the McKenna hypnosis. Show up to the live Q&amp;A. Walk into the VIP Lounge. <strong>If you don't feel a real shift in 15 days, refund yourself in one click.</strong> No emails. No win-back. We just trust you.</p>
-        </div>
-      </div>
+      <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $1</a>
     </div>
   </div>
 </section>
@@ -612,28 +598,23 @@
 
     <div class="vip-order">
       <div class="vip-order-card">
-        <div class="pb-markdown mv-type--titlebold4 mb-1" style="font-weight: 800;"><p>Wealth Codes VIP</p></div>
-        <div class="mv-type--caption text-cool-grey-500" style="margin-bottom: 22px; font-weight: 500;">Tripwire pricing — only on this page · Goes to $99 immediately after</div>
+        <div class="pb-markdown mv-type--titlebold4 mb-1" style="font-weight: 800;"><p>VIP Access · Wealth Recoding Room</p></div>
+        <div class="mv-type--caption text-cool-grey-500" style="margin-bottom: 22px; font-weight: 500;">Only on this page · Goes to $99 after this page closes</div>
 
         <div class="vip-order-included">
-          <div class="vip-order-included-label">3 extra private experiences for VIPs</div>
+          <div class="vip-order-included-label">What's included</div>
           <ul>
-            <li><strong>The Wealth Recoding Room</strong> — extra private session w/ McKenna, Vishen &amp; Regan</li>
-            <li><strong>2× Intimate Live Q&amp;A</strong> — private VIP-only sessions w/ Vishen &amp; Regan</li>
+            <li><strong>The Wealth Recoding Room</strong> — private session w/ Vishen &amp; Regan</li>
+            <li><strong>2× Private VIP Q&amp;A</strong> — get your specific blocker dissolved live</li>
             <li><strong>The VIP Lounge</strong> — private Zoom room + 30-day replays</li>
-            <li>15-day money-back guarantee, no questions</li>
           </ul>
         </div>
 
         <div class="vip-order-strike">$99</div>
         <div class="vip-order-now">$1</div>
-        <div class="vip-order-renewal">After this page closes, Wealth Codes returns to $99</div>
+        <div class="vip-order-renewal">For the next 15 minutes only · then $99</div>
 
-        <a href="#" class="vip-cta vip-cta-block vip-cta-mega">Add Wealth Codes for $1</a>
-        <div class="vip-order-guarantee">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          15-day money-back guarantee
-        </div>
+        <a href="#" class="vip-cta vip-cta-block vip-cta-mega">Add VIP Access for $1</a>
       </div>
 
       <div class="vip-order-payments">
@@ -685,7 +666,7 @@
         <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
           <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Wait — $1? What's the catch?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>No catch. This is a tripwire — we'd rather you say yes for $1 and feel the work change you, than walk away because of price. After this page closes, Wealth Codes returns to $99 (its real price). You're getting it for $1 because you're here, right now, in the moment of decision.</p>
+            <p>No catch. We'd rather you say yes for $1 and feel the work change something in you, than walk away because of price. After this page closes, VIP access returns to $99 (its real price). You're getting it for $1 because you're here, right now, in the moment of decision.</p>
           </div>
         </details>
 
@@ -697,23 +678,16 @@
         </details>
 
         <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Will hypnosis work on me? I've never tried it.</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Is this for me if I'm new to manifesting?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>Yes. Paul McKenna has guided millions in this exact format. You sit, you listen, your subconscious does the rest. First-time hypnotherapy clients often have <em>more</em> profound shifts because there's no resistance built up.</p>
+            <p>Yes. 87% of our students are beginner–intermediate. The Wealth Recoding Room is built for anyone who's tried to manifest wealth and felt it stall.</p>
           </div>
         </details>
 
         <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Is this only for advanced manifestors?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">What happens after the summit ends?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>No. 87% of our students are beginner–intermediate. Wealth Codes is built for anyone who's tried to manifest wealth and felt it stall.</p>
-          </div>
-        </details>
-
-        <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">How does the 15-day refund work?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
-          <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>Open your dashboard → click "Refund VIP." Done. The $1 returns to your card in 3–5 business days. No survey, no questions.</p>
+            <p>You keep 30 days of HD replay access in the VIP Lounge — every Wealth Recoding Room session, every Q&amp;A, every minute of the summit. Watch on your schedule.</p>
           </div>
         </details>
 
