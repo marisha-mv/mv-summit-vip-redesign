@@ -45,44 +45,37 @@
   .vip-topbar-meta { display: flex; gap: 24px; font-size: 14px; color: var(--mv-text-muted); }
   .vip-topbar-meta a { color: var(--mv-text-muted); text-decoration: none; }
 
-  /* Countdown — Tony Robbins-style HIGH energy alert */
+  /* Countdown — restrained urgency */
   .countdown-bar {
-    background: linear-gradient(135deg, #d8273a 0%, #f34747 100%);
+    background: var(--mv-text);
     color: #fff;
-    padding: 14px 24px;
+    padding: 12px 24px;
     text-align: center;
-    font-size: 15px; font-weight: 600;
-    display: flex; align-items: center; justify-content: center; gap: 18px;
+    font-size: 14px; font-weight: 500;
+    display: flex; align-items: center; justify-content: center; gap: 14px;
     flex-wrap: wrap;
-    text-transform: uppercase; letter-spacing: 0.04em;
   }
-  .countdown-bar strong { font-weight: 800; }
-  .countdown-units { display: inline-flex; gap: 6px; font-weight: 800; }
-  .countdown-unit { background: rgba(0,0,0,0.25); padding: 5px 10px; border-radius: 6px; min-width: 42px; text-align: center; font-size: 18px; }
-  .countdown-unit-label { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85; display: block; line-height: 1; margin-top: 2px; }
+  .countdown-bar strong { font-weight: 700; }
+  .countdown-units { display: inline-flex; gap: 4px; font-weight: 700; }
+  .countdown-unit { background: rgba(255,255,255,0.12); padding: 4px 8px; border-radius: 5px; min-width: 36px; text-align: center; font-size: 14px; }
+  .countdown-unit-label { font-size: 9px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.7; display: block; line-height: 1; margin-top: 1px; }
 
-  /* Tony Robbins CTAs — BIGGER, more dramatic */
+  /* CTAs — single brand color, no animation */
   .vip-cta {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    background: linear-gradient(180deg, #ff9f37 0%, var(--mv-orange) 100%);
+    background: var(--mv-brand);
     color: #fff !important;
-    font-weight: 700; font-size: 18px;
-    padding: 19px 44px;
+    font-weight: 600; font-size: 17px;
+    padding: 18px 38px;
     border-radius: 999px;
     text-decoration: none !important;
-    box-shadow: 0 10px 28px rgba(237,99,37,0.38), inset 0 1px 0 rgba(255,255,255,0.35);
-    transition: transform .12s, filter .12s, box-shadow .12s;
+    box-shadow: 0 6px 18px rgba(122,18,212,0.22);
+    transition: background .15s, transform .12s, box-shadow .12s;
     border: none; cursor: pointer; line-height: 1;
-    text-transform: uppercase; letter-spacing: 0.02em;
-    animation: pulse-cta 2.5s ease-in-out infinite;
   }
-  .vip-cta:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.05); animation: none; }
+  .vip-cta:hover { background: var(--mv-brand-content, #680fb4); transform: translateY(-1px); box-shadow: 0 10px 24px rgba(122,18,212,0.3); }
   .vip-cta-block { display: block; width: 100%; text-align: center; }
-  .vip-cta-mega { font-size: 22px; padding: 22px 56px; }
-  @keyframes pulse-cta {
-    0%, 100% { box-shadow: 0 10px 28px rgba(237,99,37,0.38), inset 0 1px 0 rgba(255,255,255,0.35); }
-    50% { box-shadow: 0 14px 36px rgba(237,99,37,0.55), inset 0 1px 0 rgba(255,255,255,0.4); }
-  }
+  .vip-cta-mega { font-size: 18px; padding: 20px 46px; }
 
   /* Big purple badges */
   .tr-badge {
@@ -193,20 +186,13 @@
   .bonus-card-grid { display: grid; grid-template-columns: 280px 1fr; gap: 0; }
   @media (max-width: 720px) { .bonus-card-grid { grid-template-columns: 1fr; } }
   .bonus-card-visual {
-    background: linear-gradient(135deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
+    background: linear-gradient(135deg, var(--mv-brand-dark) 0%, var(--mv-brand) 100%);
     color: #fff;
-    padding: 36px 28px;
+    padding: 32px 28px;
     display: flex; flex-direction: column; justify-content: space-between;
     position: relative; overflow: hidden;
-    min-height: 280px;
+    min-height: 260px;
   }
-  .bonus-card-visual::after {
-    content: ''; position: absolute; inset: 0;
-    background-image: radial-gradient(rgba(255,255,255,0.2) 1px, transparent 1px);
-    background-size: 14px 14px; opacity: 0.4;
-  }
-  .bonus-card-visual.green { background: linear-gradient(135deg, var(--mv-green-dark) 0%, var(--mv-green) 100%); }
-  .bonus-card-visual.gold { background: linear-gradient(135deg, var(--mv-orange) 0%, var(--mv-orange-bright) 100%); }
   .bonus-card-num {
     font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
     background: rgba(0,0,0,0.2); backdrop-filter: blur(8px);
@@ -342,14 +328,10 @@
   }
   .vip-order { max-width: 580px; margin: 0 auto; }
   .vip-order-card {
-    background: #fff; border-radius: 28px; padding: 44px 44px 36px;
-    box-shadow: 0 20px 60px rgba(122,18,212,0.18), 0 1px 3px rgba(0,0,0,0.06);
-    border: 2px solid var(--mv-brand-light);
+    background: #fff; border-radius: 24px; padding: 40px 40px 32px;
+    box-shadow: 0 12px 40px rgba(122,18,212,0.12), 0 1px 3px rgba(0,0,0,0.04);
+    border: 1px solid var(--mv-grey-250);
     position: relative; overflow: hidden;
-  }
-  .vip-order-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
-    background: linear-gradient(90deg, var(--mv-brand), var(--mv-pink), var(--mv-orange));
   }
   .vip-order-included {
     padding: 18px 22px; background: var(--mv-grey-100);
@@ -361,11 +343,8 @@
   .vip-order-included li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--mv-green); font-weight: 800; font-size: 16px; }
   .vip-order-strike { font-size: 34px; font-weight: 800; color: #979ca5; text-decoration: line-through; text-decoration-thickness: 3px; margin-bottom: 4px; letter-spacing: -0.02em; text-align: right; }
   .vip-order-now {
-    font-size: 120px; font-weight: 900; color: var(--mv-text);
+    font-size: 96px; font-weight: 800; color: var(--mv-brand);
     line-height: 0.9; letter-spacing: -0.05em; margin: 0 0 8px; text-align: right;
-    background: linear-gradient(180deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   .vip-order-renewal { font-size: 14px; color: var(--mv-text-muted); margin-bottom: 26px; text-align: right; font-weight: 500; }
   .vip-order-guarantee { margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; color: var(--mv-text); font-weight: 700; }
@@ -403,7 +382,7 @@
 <!-- COUNTDOWN -->
 <section data-name="Countdown" class="pb-Container countdown min-h-fit mv-top__banner">
   <div class="countdown-bar">
-    <span>⚡ <strong>This page expires when you leave.</strong> $1 access closes in:</span>
+    <span><strong>$1 Wealth Codes upgrade</strong> — closes when you leave this page</span>
     <span class="countdown-units" id="countdown">
       <span class="countdown-unit">00<span class="countdown-unit-label">D</span></span>
       <span class="countdown-unit">00<span class="countdown-unit-label">H</span></span>
@@ -444,52 +423,39 @@
   <div class="pt-8 lg_pt-12 pb-12 lg_pb-16 min-h-fit">
     <div class="w-full relative mv-container min-h-fit">
 
-      <!-- Top badge (matches production badge--plain-pink) -->
+      <!-- Eyebrow badge -->
       <div class="pb-6 flex items-center justify-center min-h-fit">
-        <div class="badge badge--large badge--plain-pink badge--font-pink">
-          <p class="inline-grid">⚡ Stop. Read this before you leave this page.</p>
-        </div>
+        <span class="tr-badge">VIP Upgrade · This page only</span>
       </div>
 
       <!-- Headline -->
       <div class="pb-markdown min-h-fit md_text-center">
-        <h1 class="hero-h1">You came to manifest. <em>Now let's solve the one thing that's been blocking you for years.</em></h1>
+        <h1 class="hero-h1">You came to manifest. <em>Add the Wealth Codes for $1.</em></h1>
       </div>
 
       <!-- Subhead -->
-      <div class="pb-markdown min-h-fit mv-type--title6 md_text-center mt-6 mb-6 w-full md_w-3/4 mx-auto" style="font-size: 20px; line-height: 1.5;">
-        <p>You're already a manifestor. You've manifested small things. But the <strong>big one</strong> — the wealth that finally changes everything — keeps stalling. <span class="tr-italic">That's not your fault.</span> It's wiring. And in the next 3 days, with the right people in the room with you, <strong>that wiring rewrites itself.</strong></p>
+      <div class="pb-markdown min-h-fit mv-type--title6 md_text-center mt-6 mb-8 w-full md_w-3/4 mx-auto" style="font-size: 19px; line-height: 1.5;">
+        <p>You're in for the summit. <strong>Wealth Codes is the one extra thing that gets the deeper money work to actually land</strong> — three private VIP-only sessions with Vishen, Regan and Paul McKenna. For the next 15 minutes, $1.</p>
       </div>
 
-      <!-- Production VIP banner image (the big one with all 5 speakers' faces) -->
-      <div class="overflow-hidden rounded w-full md_w-4/5 mx-auto mt-8">
-        <img src="assets/banners/vip-banner.jpg" alt="VIP Access · Wealth Codes · Manifesting Summit"
-             class="cld-responsive rounded w-full" style="display: block; width: 100%; height: auto;" />
+      <!-- Production VIP banner image -->
+      <div class="overflow-hidden rounded w-full md_w-4/5 mx-auto mt-4">
+        <img src="assets/banners/vip-banner.jpg" alt="Wealth Codes VIP — Vishen, Regan, Sonia, McKenna, Ghiyam"
+             class="rounded w-full" style="display: block; width: 100%; height: auto;" />
       </div>
 
-      <!-- Caption under banner -->
+      <!-- Caption -->
       <div class="pb-markdown min-h-fit text-center mv-type--caption w-full md_w-3/4 mx-auto mt-4 mb-8">
-        <p style="color: var(--mv-text);">Go Deeper. Recode the Wiring. With the World's Most Powerful Teachers — Live.</p>
+        <p style="color: var(--mv-text-muted);">Three extra private sessions with the world's leading wealth manifesting teachers — live.</p>
       </div>
 
-      <!-- TR-style closing line + CTA -->
-      <div class="pb-markdown min-h-fit text-center mt-2 mb-6" style="font-size: 22px; font-weight: 700; color: var(--mv-text);">
-        <p>For the next 15 minutes, you can add the <span class="tr-pink">Wealth Codes VIP</span> for the price of a snack.</p>
-      </div>
-
+      <!-- CTA -->
       <div class="flex flex-col items-center gap-4 mt-8">
-        <a href="#apply-now" class="vip-cta vip-cta-mega">YES — UNLOCK WEALTH CODES FOR $1</a>
-        <span style="font-size: 14px; color: var(--mv-text-muted); display: inline-flex; align-items: center; gap: 8px;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          15-day money-back · No emails, no questions
+        <a href="#apply-now" class="vip-cta vip-cta-mega">Add Wealth Codes — $1</a>
+        <span style="font-size: 13px; color: var(--mv-text-muted); display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          15-day money-back · One click refund
         </span>
-      </div>
-
-      <div style="display: flex; justify-content: center; margin-top: 18px;">
-        <div class="hero-stat-row">
-          <span class="pip"></span>
-          <span style="font-size: 13px; font-weight: 600; color: var(--mv-text);">2,847 attendees just upgraded · Spots filling now</span>
-        </div>
       </div>
 
     </div>
@@ -499,32 +465,13 @@
 <!-- WOUND — TR style emotional dramatic single-column -->
 <section data-name="The Wound" class="pb-Container wound min-h-fit mv-section__gutter wound-bg">
   <div class="mv-container min-h-fit">
-    <div class="text-center mb-10">
-      <span class="tr-badge tr-badge-pink">⚡ Read this slowly</span>
-    </div>
-
     <p class="wound-quote">
-      You've been doing this work for <em>years</em>. Vision boards. Affirmations. Meditation. You've watched <strong>other people</strong> manifest their dream lives — businesses, partners, freedom, wealth. And somewhere, quietly, a voice in you wonders: <em>"why does it work for them and not me?"</em>
+      You've manifested small things. You watch <strong>other people</strong> manifest the big ones — wealth, businesses, freedom. And quietly, a voice in you wonders: <em>"why does it work for them and not me?"</em>
     </p>
 
-    <p class="wound-quote" style="margin-top: 32px;">
-      Here's the truth — <em>nothing is broken about you.</em> You are already a manifestor. <strong>Your nervous system is just running an older version of you</strong> — one that learned, before you were 7 years old, that receiving wasn't safe. <strong>That's the only thing standing between you and the wealth you've been asking for.</strong>
+    <p class="wound-quote" style="margin-top: 28px;">
+      It's not your fault. <strong>Wealth has its own wiring</strong> — money trauma installed before you were 7, generational patterns, the body's "more = unsafe" reflex. <em>That's the layer affirmations don't reach.</em> And that's the layer the next 3 days are designed to rewire.
     </p>
-
-    <div class="wound-stat-grid">
-      <div class="wound-stat">
-        <div class="wound-stat-num">94%</div>
-        <div class="wound-stat-label">of summit attendees came for <strong style="color: var(--mv-text);">wealth manifestation</strong></div>
-      </div>
-      <div class="wound-stat">
-        <div class="wound-stat-num">33%</div>
-        <div class="wound-stat-label">stay stuck on <strong style="color: var(--mv-text);">"I don't deserve it"</strong> — wired before age 7</div>
-      </div>
-      <div class="wound-stat">
-        <div class="wound-stat-num">3 days</div>
-        <div class="wound-stat-label">is all it takes when you're <strong style="color: var(--mv-text);">in the right room with the right teachers</strong></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -532,12 +479,12 @@
 <section id="apply-now-trigger" data-name="Bonuses" class="pb-Container bonuses min-h-fit mv-section__gutter pb-navigable bonuses-bg">
   <div class="mv-container min-h-fit">
     <div class="text-center mb-12">
-      <span class="tr-badge">VIPs get extra sessions</span>
+      <span class="tr-badge">What VIPs unlock</span>
       <div class="pb-markdown min-h-fit mt-6">
-        <h2 style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800; margin: 0 0 18px;">The free summit happens on the main stage.<br/>VIPs get the <em style="background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-style: normal;">private room behind it.</em></h2>
+        <h2 style="font-size: clamp(32px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.022em; font-weight: 700; margin: 0 0 16px;">Three extra private sessions, on top of the summit.</h2>
       </div>
-      <div class="pb-markdown mv-type--body" style="max-width: 700px; margin: 0 auto; font-size: 18px;">
-        <p>On top of all 3 days of summit content, <strong>VIPs unlock 2 extra private sessions plus a private community room</strong> — smaller, more intimate, away from the general crowd. <span class="tr-italic">This is where the real wiring change happens.</span></p>
+      <div class="pb-markdown mv-type--body" style="max-width: 640px; margin: 0 auto; font-size: 17px; color: var(--mv-text-muted);">
+        <p>The deeper wealth work doesn't fit on the main stage. It needs a smaller room. These three sessions are where it happens — and they're only available to VIPs.</p>
       </div>
     </div>
 
@@ -547,7 +494,7 @@
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <span class="bonus-card-num">⚡ Extra Session #1</span>
+            <span class="bonus-card-num">Extra Session #1</span>
             <h3 class="bonus-card-name">The Wealth Frequency Room</h3>
             <span class="bonus-card-value">Standalone value: <strong>$1,500</strong></span>
           </div>
@@ -575,8 +522,8 @@
       <!-- BONUS 2: INTIMATE LIVE Q&A (extra private session) -->
       <div class="bonus-card">
         <div class="bonus-card-grid">
-          <div class="bonus-card-visual gold">
-            <span class="bonus-card-num">⚡ Extra Session #2</span>
+          <div class="bonus-card-visual">
+            <span class="bonus-card-num">Extra Session #2</span>
             <h3 class="bonus-card-name">Intimate Live Q&amp;A</h3>
             <span class="bonus-card-value">Standalone value: <strong>$2,000</strong></span>
           </div>
@@ -604,8 +551,8 @@
       <!-- BONUS 3: THE VIP LOUNGE (private room) -->
       <div class="bonus-card">
         <div class="bonus-card-grid">
-          <div class="bonus-card-visual green">
-            <span class="bonus-card-num">⚡ Private Container</span>
+          <div class="bonus-card-visual">
+            <span class="bonus-card-num">Private Container</span>
             <h3 class="bonus-card-name">The VIP Lounge</h3>
             <span class="bonus-card-value">Standalone value: <strong>$500</strong></span>
           </div>
@@ -630,52 +577,8 @@
 
     </div>
 
-    <div class="text-center mt-10">
-      <a href="#apply-now" class="vip-cta vip-cta-mega">YES — I WANT ALL 3 FOR $1</a>
-    </div>
-  </div>
-</section>
-
-<!-- VALUE STACK -->
-<section data-name="Value Stack" class="pb-Container value-stack-section min-h-fit vs-bg" style="padding-top: 100px; padding-bottom: 100px;">
-  <div class="mv-container min-h-fit" style="position: relative;">
-    <div class="text-center mb-10">
-      <span class="tr-badge tr-badge-gold">The math</span>
-      <div class="pb-markdown mt-5 mb-3">
-        <h2 class="vs-h2">$4,000 of access. <em>For ONE dollar.</em></h2>
-      </div>
-      <div class="pb-markdown mv-type--body" style="color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; font-size: 18px;">
-        <p>Yes — this is real. Yes — you're not misreading it. Here's exactly what these experiences cost individually:</p>
-      </div>
-    </div>
-
-    <div class="value-table">
-      <div class="value-row">
-        <div class="value-row-label">The Wealth Frequency Room (1-Hour McKenna Hypnotherapy + Vishen &amp; Regan Deep Dive)<span class="meta">Standard 1-on-1 hypnotherapy: $1,500</span></div>
-        <div class="value-row-amt">$1,500</div>
-      </div>
-      <div class="value-row">
-        <div class="value-row-label">2× Intimate Live Q&amp;A with Vishen &amp; Regan<span class="meta">Direct teacher access · $1,000 per session</span></div>
-        <div class="value-row-amt">$2,000</div>
-      </div>
-      <div class="value-row">
-        <div class="value-row-label">The VIP Lounge — Private Zoom + 30-Day Replays<span class="meta">Premium event-tier access</span></div>
-        <div class="value-row-amt">$500</div>
-      </div>
-      <div class="value-row total">
-        <div class="value-row-label">Total à-la-carte value</div>
-        <div class="value-row-amt">$4,000</div>
-      </div>
-    </div>
-
-    <div class="vs-strike-now">
-      <div class="vs-strike">$99</div>
-      <div class="vs-now">$1</div>
-      <div class="vs-savings">⚡ You save $3,999 · 99.97% off</div>
-    </div>
-
-    <div class="text-center mt-6">
-      <a href="#apply-now" class="vip-cta vip-cta-mega" style="background: linear-gradient(180deg, #ffd86b 0%, var(--mv-orange-bright) 100%); color: var(--mv-text) !important;">UNLOCK ALL 3 BONUSES FOR $1</a>
+    <div class="text-center mt-12">
+      <a href="#apply-now" class="vip-cta vip-cta-mega">Add Wealth Codes — $1</a>
     </div>
   </div>
 </section>
@@ -701,12 +604,9 @@
 <section id="apply-now" data-name="Upgrade now" class="pb-Container upgrade-now min-h-fit order-bg mv-section__gutter pb-navigable">
   <div class="mv-container min-h-fit">
     <div class="text-center mb-10">
-      <span class="tr-badge tr-badge-pink">⚡ Your decision</span>
+      <span class="tr-badge">Your one-click decision</span>
       <div class="pb-markdown mt-5 mb-3">
-        <h2 style="font-size: clamp(34px, 4.5vw, 52px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800; margin: 0 0 14px;">It's literally <em style="background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-style: normal;">one dollar.</em></h2>
-      </div>
-      <div class="pb-markdown mv-type--body" style="font-size: 17px; max-width: 600px; margin: 0 auto;">
-        <p>You spent more on parking. Don't think. <strong>Decide.</strong></p>
+        <h2 style="font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.022em; font-weight: 700; margin: 0 0 12px;">Add Wealth Codes for $1.</h2>
       </div>
     </div>
 
@@ -729,7 +629,7 @@
         <div class="vip-order-now">$1</div>
         <div class="vip-order-renewal">After this page closes, Wealth Codes returns to $99</div>
 
-        <a href="#" class="vip-cta vip-cta-block vip-cta-mega">UNLOCK FOR $1 NOW</a>
+        <a href="#" class="vip-cta vip-cta-block vip-cta-mega">Add Wealth Codes for $1</a>
         <div class="vip-order-guarantee">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           15-day money-back guarantee
