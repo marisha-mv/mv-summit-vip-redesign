@@ -197,35 +197,43 @@
     width: 100%; height: 100%; object-fit: cover;
     display: block; position: absolute; inset: 0;
   }
+  .bonus-card-visual img { filter: saturate(0.35) brightness(0.55); }
   .bonus-card-visual::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(79,12,138,0.65) 0%, rgba(122,18,212,0.45) 100%);
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(33,5,68,0.65) 60%, rgba(33,5,68,0.92) 100%),
+      linear-gradient(135deg, rgba(79,12,138,0.55) 0%, rgba(122,18,212,0.35) 100%);
   }
   .bonus-card-visual-content {
     position: relative; z-index: 1;
-    padding: 32px 28px;
+    padding: 28px 28px 26px;
     display: flex; flex-direction: column; justify-content: space-between;
-    height: 100%; min-height: 260px;
+    height: 100%; min-height: 280px;
   }
   .bonus-card-num {
-    font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
-    background: rgba(0,0,0,0.2); backdrop-filter: blur(8px);
+    font-size: 11px; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;
+    background: rgba(0,0,0,0.35); backdrop-filter: blur(8px);
     padding: 6px 12px; border-radius: 999px;
     align-self: flex-start;
     position: relative; z-index: 1;
+    color: rgba(255,255,255,0.92);
   }
   .bonus-card-name {
-    font-size: 32px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
-    margin: 12px 0 0; color: #fff; position: relative; z-index: 1;
+    font-size: 38px; font-weight: 800; line-height: 1.02; letter-spacing: -0.025em;
+    margin: 14px 0 0; color: #fff; position: relative; z-index: 1;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.35);
   }
   .bonus-card-value {
-    font-size: 14px; opacity: 0.9; font-weight: 600;
-    background: rgba(255,255,255,0.18); backdrop-filter: blur(8px);
-    padding: 7px 14px; border-radius: 999px;
-    align-self: flex-start; margin-top: 16px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+    background: linear-gradient(135deg, var(--mv-yellow) 0%, var(--mv-yellow-bright) 100%);
+    color: var(--mv-text);
+    padding: 10px 16px; border-radius: 10px;
+    align-self: flex-start; margin-top: 18px;
     position: relative; z-index: 1;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.4);
+    text-transform: uppercase;
   }
-  .bonus-card-value strong { font-weight: 800; font-size: 16px; }
+  .bonus-card-value strong { font-weight: 900; font-size: 17px; letter-spacing: -0.01em; text-transform: none; }
   .bonus-card-body {
     padding: 36px 36px;
     display: flex; flex-direction: column; justify-content: center;
@@ -552,7 +560,7 @@
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <img src="assets/banners/wealth-recoding-room.png" alt="Wealth Recoding Room" />
+            <img src="assets/banners/bonus-1-cosmic.jpg" alt="" />
             <div class="bonus-card-visual-content">
               <span class="bonus-card-num">Session 1 · The Headline Experience</span>
               <h3 class="bonus-card-name">The Wealth Recoding Room</h3>
@@ -582,7 +590,7 @@
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <img src="assets/banners/speakers-lineup.jpg" alt="Live Q&A with Vishen and Regan" />
+            <img src="assets/banners/bonus-2-light.jpg" alt="" />
             <div class="bonus-card-visual-content">
               <span class="bonus-card-num">Session 2 · Intimate Q&amp;A</span>
               <h3 class="bonus-card-name">2× Private VIP Q&amp;A</h3>
@@ -613,7 +621,7 @@
       <div class="bonus-card">
         <div class="bonus-card-grid">
           <div class="bonus-card-visual">
-            <img src="assets/banners/vip-banner.jpg" alt="VIP Lounge — private room for Master Manifestors" />
+            <img src="assets/banners/bonus-3-abstract.jpg" alt="" />
             <div class="bonus-card-visual-content">
               <span class="bonus-card-num">Session 3 · The Private Room</span>
               <h3 class="bonus-card-name">The VIP Lounge</h3>
