@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Wealth Codes VIP — $1 today · Manifesting Summit · Mindvalley</title>
+<title>VIP Access · Wealth Recoding Room · Manifesting Summit · Mindvalley</title>
 
 <!-- Mindvalley production CSS — loaded EXACTLY as the live VIP page loads them
      Source: https://www.mindvalley.com/summit/manifesting/vip (17 stylesheets) -->
@@ -378,6 +378,43 @@
   .tr-italic { font-style: italic; color: var(--mv-brand); font-weight: 700; }
   .tr-strong { font-weight: 800; color: var(--mv-text); }
   .tr-pink { color: var(--mv-pink); font-weight: 800; }
+
+  /* Stories — real wealth-focused Manifesting Mastery testimonials */
+  .stories-bg { background: #fff; }
+  .stories-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;
+    max-width: 1040px; margin: 0 auto;
+  }
+  @media (max-width: 720px) { .stories-grid { grid-template-columns: 1fr; } }
+  .story-card {
+    display: flex; flex-direction: column; gap: 18px;
+    background: #fff; border: 1px solid var(--mv-grey-250); border-radius: 18px;
+    padding: 28px; transition: all 0.18s ease;
+  }
+  .story-card:hover { border-color: var(--mv-brand-light); box-shadow: 0 12px 32px rgba(122,18,212,0.08); transform: translateY(-2px); }
+  .story-card-header { display: flex; align-items: center; gap: 14px; }
+  .story-card-photo {
+    width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+    border: 2px solid var(--mv-brand-light);
+  }
+  .story-card-name { font-weight: 800; font-size: 16px; color: var(--mv-text); line-height: 1.2; margin: 0 0 3px; }
+  .story-card-meta { font-size: 13px; color: var(--mv-text-muted); line-height: 1.3; margin: 0; }
+  .story-card-result {
+    display: inline-block; align-self: flex-start;
+    padding: 6px 12px; background: var(--mv-brand-light); color: var(--mv-brand-dark);
+    border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .story-card-quote {
+    font-size: 17px; line-height: 1.55; color: var(--mv-text); font-weight: 500;
+    margin: 0; font-style: italic;
+  }
+  .story-card-quote::before { content: '"'; color: var(--mv-brand); font-weight: 800; }
+  .story-card-quote::after { content: '"'; color: var(--mv-brand); font-weight: 800; }
+  .stories-source {
+    text-align: center; margin-top: 32px; font-size: 13px; color: var(--mv-text-muted);
+  }
+  .stories-source a { color: var(--mv-brand); text-decoration: underline; font-weight: 600; }
 </style>
 </head>
 <body class="bg-white">
@@ -419,7 +456,7 @@
       <div class="mv-progress-bar w-1/3 lg_text-center md_py-6 flex items-center justify-center orange">
         <span class="progress-bar--num">2</span>
         <div class="progress-bar--label label text-cool-grey-500 mv-type--caption mt-0">
-          <span class="hidden md_inline-block">Add Wealth Codes — $1</span>
+          <span class="hidden md_inline-block">Add VIP Access — $1</span>
         </div>
       </div>
       <div class="mv-progress-bar w-1/3 lg_text-center md_py-6 flex items-center justify-center">
@@ -586,13 +623,94 @@
   </div>
 </section>
 
+<!-- STORIES — Real Manifesting Mastery wealth wins -->
+<section data-name="Stories" class="pb-Container stories min-h-fit mv-section__gutter stories-bg">
+  <div class="mv-container min-h-fit">
+    <div class="text-center mb-10">
+      <span class="tr-badge">Real wealth wins from the Manifesting Mastery community</span>
+      <div class="pb-markdown mt-5 mb-3">
+        <h2 class="mv-type--title2" style="max-width: 820px; margin: 0 auto;">
+          When the room teaches you to <em class="tr-italic">recode wealth</em> — this is what gets unlocked.
+        </h2>
+      </div>
+      <p class="text-cool-grey-500" style="max-width: 640px; margin: 18px auto 0; font-size: 17px; line-height: 1.55;">
+        Real members. Real names. Real numbers. Sourced from <a href="https://stories.mindvalley.com/product/manifesting-mastery" style="color: var(--mv-brand); text-decoration: underline;">stories.mindvalley.com</a> — verified students of the same teachers running this VIP room.
+      </p>
+    </div>
+
+    <div class="stories-grid">
+
+      <!-- George Molakal -->
+      <div class="story-card">
+        <div class="story-card-header">
+          <img class="story-card-photo" src="assets/people/george-molakal.jpg" alt="George Molakal" />
+          <div>
+            <p class="story-card-name">George Molakal</p>
+            <p class="story-card-meta">CEO · Chicago, United States</p>
+          </div>
+        </div>
+        <span class="story-card-result">Tripled his money in 52 weeks</span>
+        <p class="story-card-quote">In 52 weeks, the Manifestation Mastery program has truly transformed my life — in ways that still feel miraculous when I look back. I healed my hand, tripled my money, and rewired my identity.</p>
+      </div>
+
+      <!-- Solveig Stølsvik -->
+      <div class="story-card">
+        <div class="story-card-header">
+          <img class="story-card-photo" src="assets/people/solveig.jpg" alt="Solveig Stølsvik" />
+          <div>
+            <p class="story-card-name">Solveig Stølsvik</p>
+            <p class="story-card-meta">Clothing Designer · Stavanger, Norway</p>
+          </div>
+        </div>
+        <span class="story-card-result">$300,000 in turnover · in one month</span>
+        <p class="story-card-quote">After the Manifesting Mastery Program, I'm operating on NINJA LEVEL. In May alone, I hit my stepping-stone goal of $300,000 in turnover — selling a clothing line I designed from scratch, with no prior experience.</p>
+      </div>
+
+      <!-- Rutnaish Prihar -->
+      <div class="story-card">
+        <div class="story-card-header">
+          <img class="story-card-photo" src="assets/people/rutnaish.jpg" alt="Rutnaish Prihar" />
+          <div>
+            <p class="story-card-name">Rutnaish Prihar</p>
+            <p class="story-card-meta">Interior Designer · Toronto, Canada</p>
+          </div>
+        </div>
+        <span class="story-card-result">$70K deposit + national TV feature</span>
+        <p class="story-card-quote">I just deposited nearly $70K in my business account. Plus, I was just featured on National TV. Before this program, I had never realized how much I had quietly manifested my whole life.</p>
+      </div>
+
+      <!-- Alice Chen -->
+      <div class="story-card">
+        <div class="story-card-header">
+          <img class="story-card-photo" src="assets/people/alice-chen.jpg" alt="Alice Chen" />
+          <div>
+            <p class="story-card-name">Alice Chen</p>
+            <p class="story-card-meta">FinTech Founder · San Francisco, US</p>
+          </div>
+        </div>
+        <span class="story-card-result">$3M oversubscribed seed round</span>
+        <p class="story-card-quote">I began my manifestation journey through Regan's Art of Manifesting. At the time I was at a fork — two start-ups that both needed a miracle. My FinTech startup managed to complete an oversubscribed $3M seed round.</p>
+      </div>
+
+    </div>
+
+    <p class="stories-source">
+      Read the full stories at <a href="https://stories.mindvalley.com/product/manifesting-mastery" target="_blank" rel="noopener">stories.mindvalley.com/product/manifesting-mastery</a>
+    </p>
+
+    <div class="text-center mt-12">
+      <a href="#apply-now" class="vip-cta vip-cta-mega">Add VIP Access — $1</a>
+    </div>
+  </div>
+</section>
+
 <!-- ORDER MENU -->
 <section id="apply-now" data-name="Upgrade now" class="pb-Container upgrade-now min-h-fit order-bg mv-section__gutter pb-navigable">
   <div class="mv-container min-h-fit">
     <div class="text-center mb-10">
       <span class="tr-badge">Your one-click decision</span>
       <div class="pb-markdown mt-5 mb-3">
-        <h2 style="font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.022em; font-weight: 700; margin: 0 0 12px;">Add Wealth Codes for $1.</h2>
+        <h2 style="font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -0.022em; font-weight: 700; margin: 0 0 12px;">Add VIP Access for $1.</h2>
       </div>
     </div>
 
@@ -673,7 +791,7 @@
         <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
           <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">What if I can't make the live VIP sessions?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>Every session is recorded in HD and available in your VIP Lounge for 30 days. The McKenna hypnosis works just as deeply on replay as live (your subconscious doesn't know the difference).</p>
+            <p>Every session is recorded in HD and available in your VIP Lounge for 30 days. The Wealth Recoding Room and the live QThe McKenna hypnosis works just as deeply on replay as live (your subconscious doesn't know the difference)Q sessions all integrate just as deeply on replay (with smaller group dynamics, recordings let you go back as many times as you want).</p>
           </div>
         </details>
 
