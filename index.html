@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Wealth Codes VIP — Manifesting Summit · Mindvalley</title>
+<title>Wealth Codes VIP — $1 today · Manifesting Summit · Mindvalley</title>
 
-<!-- Mindvalley production CSS — uses live Storyblok component bundles -->
+<!-- Mindvalley production CSS -->
 <link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/app.fd2af09a9226decfcf9f.css" />
 <link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/base-button.1ec46f9d78f338ab932c.css" />
 <link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/badge-non-semantic.01ffd43e377daab4c9ac.css" />
@@ -13,44 +13,17 @@
 <link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/breadcrumb-step.5fd5c70f6c68d2257c13.css" />
 <link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/all-access-card.d1768a92fa07929e7da4.css" />
 <link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/accordion-item.9d22625da1e6a571740d.css" />
-<link rel="stylesheet" href="https://storyblok-assets.mindvalley.com/css/components/author-card.23a70da380b4e40379ae.css" />
 
 <style>
-  /* Minimal additions — only patterns not in production Storyblok components.
-     Everything else uses native MV classes (mv-container, mv-type--titleN, pb-markdown, etc). */
   :root {
-    --mv-brand: #7a12d4;
-    --mv-brand-bright: #9b37f2;
-    --mv-brand-dark: #4f0c8a;
-    --mv-brand-light: #f8efff;
-    --mv-pink: #df1a6f;
-    --mv-pink-bright: #f72c84;
-    --mv-orange: #ed6325;
-    --mv-orange-bright: #ff931f;
-    --mv-yellow: #f5c918;
-    --mv-green: #18c176;
-    --mv-green-dark: #0e6742;
-    --mv-text: #0f131a;
-    --mv-text-muted: #595e67;
-    --mv-grey-100: #f9f9f9;
-    --mv-grey-150: #f3f4f6;
-    --mv-grey-250: #dfe1e5;
+    --mv-brand: #7a12d4; --mv-brand-bright: #9b37f2; --mv-brand-dark: #4f0c8a; --mv-brand-light: #f8efff;
+    --mv-pink: #df1a6f; --mv-pink-bright: #f72c84;
+    --mv-orange: #ed6325; --mv-orange-bright: #ff931f;
+    --mv-yellow: #f5c918; --mv-yellow-bright: #ffd86b;
+    --mv-green: #18c176; --mv-green-dark: #0e6742;
+    --mv-text: #0f131a; --mv-text-muted: #595e67;
+    --mv-grey-100: #f9f9f9; --mv-grey-150: #f3f4f6; --mv-grey-250: #dfe1e5;
   }
-
-  /* Countdown banner (yellow alert strip) */
-  .countdown-bar {
-    background: linear-gradient(180deg, var(--mv-yellow) 0%, #e8b800 100%);
-    color: var(--mv-text);
-    padding: 11px 24px;
-    text-align: center;
-    font-size: 14px; font-weight: 500;
-    display: flex; align-items: center; justify-content: center; gap: 18px;
-    flex-wrap: wrap;
-  }
-  .countdown-bar strong { font-weight: 700; }
-  .countdown-units { display: inline-flex; gap: 6px; font-weight: 700; }
-  .countdown-unit { background: rgba(15,19,26,0.08); padding: 4px 8px; border-radius: 6px; min-width: 36px; text-align: center; font-size: 16px; }
-  .countdown-unit-label { font-size: 9px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.7; display: block; line-height: 1; margin-top: 2px; }
 
   /* Top chrome */
   .vip-topbar { border-bottom: 1px solid var(--mv-grey-250); background: #fff; position: sticky; top: 0; z-index: 50; }
@@ -58,243 +31,351 @@
   .vip-topbar-meta { display: flex; gap: 24px; font-size: 14px; color: var(--mv-text-muted); }
   .vip-topbar-meta a { color: var(--mv-text-muted); text-decoration: none; }
 
-  /* Custom CTAs (orange, matching MV original order menu) */
+  /* Countdown — Tony Robbins-style HIGH energy alert */
+  .countdown-bar {
+    background: linear-gradient(135deg, #d8273a 0%, #f34747 100%);
+    color: #fff;
+    padding: 14px 24px;
+    text-align: center;
+    font-size: 15px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center; gap: 18px;
+    flex-wrap: wrap;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .countdown-bar strong { font-weight: 800; }
+  .countdown-units { display: inline-flex; gap: 6px; font-weight: 800; }
+  .countdown-unit { background: rgba(0,0,0,0.25); padding: 5px 10px; border-radius: 6px; min-width: 42px; text-align: center; font-size: 18px; }
+  .countdown-unit-label { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.85; display: block; line-height: 1; margin-top: 2px; }
+
+  /* Tony Robbins CTAs — BIGGER, more dramatic */
   .vip-cta {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     background: linear-gradient(180deg, #ff9f37 0%, var(--mv-orange) 100%);
     color: #fff !important;
-    font-weight: 600; font-size: 17px;
-    padding: 17px 38px;
+    font-weight: 700; font-size: 18px;
+    padding: 19px 44px;
     border-radius: 999px;
     text-decoration: none !important;
-    box-shadow: 0 6px 16px rgba(237,99,37,0.28), inset 0 1px 0 rgba(255,255,255,0.25);
+    box-shadow: 0 10px 28px rgba(237,99,37,0.38), inset 0 1px 0 rgba(255,255,255,0.35);
     transition: transform .12s, filter .12s, box-shadow .12s;
     border: none; cursor: pointer; line-height: 1;
+    text-transform: uppercase; letter-spacing: 0.02em;
+    animation: pulse-cta 2.5s ease-in-out infinite;
   }
-  .vip-cta:hover { transform: translateY(-1px); filter: brightness(1.04); }
+  .vip-cta:hover { transform: translateY(-2px) scale(1.02); filter: brightness(1.05); animation: none; }
   .vip-cta-block { display: block; width: 100%; text-align: center; }
-  .vip-cta-lg { font-size: 18px; padding: 19px 44px; }
+  .vip-cta-mega { font-size: 22px; padding: 22px 56px; }
+  @keyframes pulse-cta {
+    0%, 100% { box-shadow: 0 10px 28px rgba(237,99,37,0.38), inset 0 1px 0 rgba(255,255,255,0.35); }
+    50% { box-shadow: 0 14px 36px rgba(237,99,37,0.55), inset 0 1px 0 rgba(255,255,255,0.4); }
+  }
 
-  /* Wound block — disappointed believer about wealth */
-  .wound-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
-  @media (max-width: 768px) { .wound-grid { grid-template-columns: 1fr; gap: 28px; } }
-  .wound-col-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    margin-bottom: 18px;
-  }
-  .wound-col-old .wound-col-label { color: #979ca5; }
-  .wound-col-new .wound-col-label { color: var(--mv-brand); }
-  .wound-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-  .wound-col li { padding: 14px 18px; border-radius: 12px; font-size: 16px; line-height: 1.4; }
-  .wound-col-old li { background: var(--mv-grey-100); color: var(--mv-text-muted); border-left: 3px solid var(--mv-grey-250); }
-  .wound-col-new li { background: var(--mv-brand-light); color: var(--mv-text); border-left: 3px solid var(--mv-brand); font-weight: 500; }
-
-  /* 3-Phase Wealth Codes mechanism */
-  .wc-phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  @media (max-width: 880px) { .wc-phases { grid-template-columns: 1fr; } }
-  .wc-phase {
-    background: #fff; border: 1px solid var(--mv-grey-250);
-    border-radius: 18px; padding: 28px 26px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  }
-  .wc-phase-num {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 38px; height: 38px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
-    color: #fff; font-weight: 700; font-size: 15px; margin-bottom: 16px;
-  }
-  .wc-phase-tag { font-size: 13px; color: var(--mv-brand); font-weight: 600; margin-bottom: 14px; }
-  .wc-phase-teachers { display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--mv-grey-150); font-size: 13px; color: var(--mv-text-muted); margin-top: 14px; }
-  .wc-phase-teachers img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-left: -8px; }
-  .wc-phase-teachers img:first-of-type { margin-left: 0; }
-
-  /* VIP feature cards */
-  .wc-features { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  @media (max-width: 720px) { .wc-features { grid-template-columns: 1fr; } }
-  .wc-feature {
-    background: #fff; border: 1px solid var(--mv-grey-250);
-    border-radius: 16px; padding: 26px;
-    display: flex; flex-direction: column;
-    transition: transform .15s, box-shadow .15s;
-  }
-  .wc-feature:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-  .wc-feature-tag {
+  /* Big purple badges */
+  .tr-badge {
     display: inline-block;
     background: var(--mv-brand-light); color: var(--mv-brand);
-    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;
-    align-self: flex-start;
+    font-size: 13px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 8px 18px; border-radius: 999px;
   }
-  .wc-feature-tag.hero {
+  .tr-badge-pink {
+    background: linear-gradient(135deg, var(--mv-pink) 0%, var(--mv-pink-bright) 100%); color: #fff;
+  }
+  .tr-badge-gold {
+    background: linear-gradient(135deg, var(--mv-yellow) 0%, var(--mv-yellow-bright) 100%); color: var(--mv-text);
+  }
+
+  /* Hero — TR style: huge headline, dramatic */
+  .hero-bg {
+    background:
+      radial-gradient(60% 70% at 100% 0%, rgba(155,55,242,0.22), transparent 60%),
+      radial-gradient(50% 50% at 0% 100%, rgba(247,44,132,0.15), transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #faf6ff 100%);
+  }
+  .hero-h1 {
+    font-size: clamp(36px, 6vw, 72px) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.03em !important;
+    font-weight: 800 !important;
+    text-wrap: balance;
+  }
+  .hero-h1 em {
+    font-style: normal;
+    background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-pre {
+    font-size: 17px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--mv-pink); margin-bottom: 16px;
+  }
+  .hero-stat-row {
+    display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    background: rgba(255,255,255,0.7); border: 1px solid var(--mv-grey-250);
+    padding: 12px 22px; border-radius: 999px;
+    backdrop-filter: blur(8px);
+    margin-top: 18px;
+  }
+  .hero-stat-row .pip { width: 8px; height: 8px; border-radius: 50%; background: var(--mv-green); animation: pip 1.4s infinite; }
+  @keyframes pip { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  /* Hero teacher avatars */
+  .hero-teachers-stack { display: flex; align-items: center; }
+  .hero-teachers-stack img {
+    width: 56px; height: 56px; border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    object-fit: cover; margin-left: -14px;
+  }
+  .hero-teachers-stack img:first-child { margin-left: 0; }
+
+  /* Wound — TR style: dramatic single-column emotional copy */
+  .wound-bg { background: var(--mv-grey-100); }
+  .wound-quote {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.3;
+    font-weight: 600;
+    color: var(--mv-text);
+    letter-spacing: -0.018em;
+    max-width: 800px; margin: 0 auto;
+    text-align: center;
+  }
+  .wound-quote em {
+    background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+  }
+  .wound-stat-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    max-width: 880px; margin: 48px auto 0;
+  }
+  @media (max-width: 720px) { .wound-stat-grid { grid-template-columns: 1fr; gap: 16px; } }
+  .wound-stat {
+    background: #fff; border: 1px solid var(--mv-grey-250);
+    border-radius: 16px; padding: 24px;
+    text-align: center;
+  }
+  .wound-stat-num {
+    font-size: 56px; font-weight: 800; line-height: 1;
+    background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.04em;
+  }
+  .wound-stat-label { font-size: 14px; color: var(--mv-text-muted); margin-top: 8px; line-height: 1.4; }
+
+  /* THREE BONUSES — Tony Robbins style: big cards, value anchors, urgency */
+  .bonuses-bg { background: linear-gradient(180deg, #faf6ff 0%, #ffffff 100%); }
+  .bonus-stack { display: flex; flex-direction: column; gap: 28px; max-width: 920px; margin: 0 auto; }
+  .bonus-card {
+    background: #fff;
+    border: 2px solid var(--mv-grey-250);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform .15s, box-shadow .15s;
+    position: relative;
+  }
+  .bonus-card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(122,18,212,0.15); border-color: var(--mv-brand-light); }
+  .bonus-card-grid { display: grid; grid-template-columns: 280px 1fr; gap: 0; }
+  @media (max-width: 720px) { .bonus-card-grid { grid-template-columns: 1fr; } }
+  .bonus-card-visual {
     background: linear-gradient(135deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
     color: #fff;
+    padding: 36px 28px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    position: relative; overflow: hidden;
+    min-height: 280px;
   }
-  .wc-feature ul { list-style: none; padding: 0; margin: 14px 0; display: flex; flex-direction: column; gap: 8px; }
-  .wc-feature li { padding-left: 22px; position: relative; font-size: 14px; color: var(--mv-text-muted); line-height: 1.45; }
-  .wc-feature li::before {
-    content: ''; position: absolute; left: 0; top: 4px;
-    width: 14px; height: 14px; border-radius: 50%; background: var(--mv-brand-light);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='%237a12d4' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
-    background-size: 10px; background-position: center; background-repeat: no-repeat;
-  }
-  .wc-feature-teachers { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--mv-grey-150); display: flex; align-items: center; gap: 10px; }
-  .wc-feature-teachers img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
-
-  /* McKenna spotlight (dark gradient) */
-  .mckenna {
-    background: linear-gradient(135deg, #1a0533 0%, #0f131a 100%);
-    color: #fff; position: relative; overflow: hidden;
-  }
-  .mckenna::before {
+  .bonus-card-visual::after {
     content: ''; position: absolute; inset: 0;
-    background:
-      radial-gradient(40% 60% at 90% 10%, rgba(247,44,132,0.25), transparent 60%),
-      radial-gradient(50% 50% at 0% 100%, rgba(155,55,242,0.3), transparent 60%);
-    pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,0.2) 1px, transparent 1px);
+    background-size: 14px 14px; opacity: 0.4;
   }
-  .mckenna-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; position: relative; }
-  @media (max-width: 880px) { .mckenna-grid { grid-template-columns: 1fr; } }
-  .mckenna-bullets { list-style: none; padding: 0; margin: 24px 0; display: flex; flex-direction: column; gap: 10px; }
-  .mckenna-bullets li { font-size: 15px; color: rgba(255,255,255,0.85); padding-left: 24px; position: relative; }
-  .mckenna-bullets li::before { content: '✓'; position: absolute; left: 0; top: 0; color: #ffd86b; font-weight: 700; }
-  .mckenna-anchor {
-    display: inline-block;
-    background: rgba(255,216,107,0.15); border: 1px solid rgba(255,216,107,0.3);
-    padding: 14px 20px; border-radius: 14px; font-size: 14px; color: #ffd86b; font-weight: 500;
-    margin-top: 20px;
+  .bonus-card-visual.green { background: linear-gradient(135deg, var(--mv-green-dark) 0%, var(--mv-green) 100%); }
+  .bonus-card-visual.gold { background: linear-gradient(135deg, var(--mv-orange) 0%, var(--mv-orange-bright) 100%); }
+  .bonus-card-num {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+    background: rgba(0,0,0,0.2); backdrop-filter: blur(8px);
+    padding: 6px 12px; border-radius: 999px;
+    align-self: flex-start;
+    position: relative; z-index: 1;
   }
-  .mckenna-anchor strong { color: #fff; font-weight: 700; font-size: 15px; }
-  .mckenna-portrait {
-    aspect-ratio: 4/5; border-radius: 20px; overflow: hidden;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5); background: #1a0533;
+  .bonus-card-name {
+    font-size: 32px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+    margin: 12px 0 0; color: #fff; position: relative; z-index: 1;
   }
-  .mckenna-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bonus-card-value {
+    font-size: 14px; opacity: 0.9; font-weight: 600;
+    background: rgba(255,255,255,0.18); backdrop-filter: blur(8px);
+    padding: 7px 14px; border-radius: 999px;
+    align-self: flex-start; margin-top: 16px;
+    position: relative; z-index: 1;
+  }
+  .bonus-card-value strong { font-weight: 800; font-size: 16px; }
+  .bonus-card-body {
+    padding: 36px 36px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  @media (max-width: 720px) { .bonus-card-body { padding: 28px; } }
+  .bonus-card-headline {
+    font-size: 22px; font-weight: 700; line-height: 1.25; letter-spacing: -0.014em;
+    color: var(--mv-text); margin: 0 0 14px;
+  }
+  .bonus-card-headline em {
+    background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+  }
+  .bonus-card-desc { font-size: 16px; color: var(--mv-text-muted); line-height: 1.55; margin: 0 0 18px; }
+  .bonus-card-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .bonus-card-list li {
+    padding-left: 28px; position: relative;
+    font-size: 15px; color: var(--mv-text); line-height: 1.45;
+  }
+  .bonus-card-list li::before {
+    content: '✓'; position: absolute; left: 0; top: 0;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--mv-brand-light); color: var(--mv-brand);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 11px;
+  }
+  .bonus-card-teachers { display: flex; align-items: center; gap: 10px; padding-top: 18px; margin-top: 18px; border-top: 1px solid var(--mv-grey-150); font-size: 13px; color: var(--mv-text-muted); }
+  .bonus-card-teachers img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
 
-  /* Testimonial */
-  .wc-testimonial {
-    max-width: 760px; margin: 0 auto;
-    background: #fff; border: 1px solid var(--mv-grey-250);
-    border-left: 4px solid var(--mv-brand);
-    border-radius: 18px; padding: 36px 40px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-    display: grid; grid-template-columns: 100px 1fr; gap: 28px; align-items: center;
-  }
-  @media (max-width: 720px) { .wc-testimonial { grid-template-columns: 1fr; gap: 18px; padding: 26px; } }
-  .wc-testimonial-photo { width: 100px; height: 100px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, var(--mv-brand), var(--mv-pink)); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 28px; }
-  .wc-testimonial-stars { color: var(--mv-yellow); font-size: 13px; letter-spacing: 1px; }
-  .wc-testimonial-note { margin-top: 20px; font-size: 12px; color: #71767f; text-align: center; padding: 8px 12px; background: #fff8e1; border: 1px dashed var(--mv-yellow); border-radius: 8px; }
-
-  /* Value stack (dark gradient) */
-  .value-stack {
+  /* Value stack — TR style maxed out */
+  .vs-bg {
     background: linear-gradient(135deg, var(--mv-brand-dark) 0%, #1a0533 100%);
     color: #fff; position: relative; overflow: hidden;
   }
-  .value-stack::before {
+  .vs-bg::before {
     content: ''; position: absolute; inset: 0;
     background:
-      radial-gradient(40% 60% at 90% 10%, rgba(247,44,132,0.25), transparent 60%),
-      radial-gradient(50% 50% at 0% 100%, rgba(155,55,242,0.3), transparent 60%);
+      radial-gradient(40% 60% at 90% 10%, rgba(247,44,132,0.3), transparent 60%),
+      radial-gradient(50% 50% at 0% 100%, rgba(155,55,242,0.35), transparent 60%);
+    pointer-events: none;
+  }
+  .vs-h2 {
+    font-size: clamp(36px, 5vw, 56px) !important;
+    line-height: 1.05 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    color: #fff !important;
+  }
+  .vs-h2 em {
+    background: linear-gradient(120deg, #ffd86b 0%, var(--mv-orange-bright) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
   }
   .value-table {
     max-width: 720px; margin: 0 auto; position: relative;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 20px; padding: 12px 32px;
-    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 24px; padding: 14px 36px;
+    backdrop-filter: blur(10px);
   }
-  .value-row { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.10); align-items: baseline; }
+  .value-row { display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.10); align-items: baseline; }
   .value-row:last-of-type { border-bottom: none; }
-  .value-row-label { font-size: 16px; color: rgba(255,255,255,0.85); }
-  .value-row-label .meta { display: block; font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
-  .value-row-amt { font-size: 20px; font-weight: 600; color: #fff; }
-  .value-row.total { background: rgba(255,255,255,0.08); margin: 12px -32px 0; padding: 22px 32px; border-radius: 12px; }
-  .value-row.total .value-row-label { font-size: 18px; font-weight: 600; color: #fff; }
-  .value-row.total .value-row-amt { font-size: 32px; font-weight: 700; color: #ffd86b; }
+  .value-row-label { font-size: 17px; color: rgba(255,255,255,0.9); font-weight: 500; }
+  .value-row-label .meta { display: block; font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; font-weight: 400; }
+  .value-row-amt { font-size: 22px; font-weight: 700; color: #fff; }
+  .value-row.total { background: linear-gradient(135deg, rgba(255,216,107,0.2), rgba(255,147,31,0.12)); margin: 16px -36px 0; padding: 26px 36px; border-radius: 16px; }
+  .value-row.total .value-row-label { font-size: 20px; font-weight: 700; color: #fff; }
+  .value-row.total .value-row-amt { font-size: 40px; font-weight: 800; color: #ffd86b; letter-spacing: -0.03em; }
 
-  /* Guarantee card */
-  .guarantee-card {
-    max-width: 720px; margin: 0 auto;
-    background: var(--mv-brand-light);
-    border: 1px solid #eed8fe;
-    border-radius: 20px; padding: 36px;
-    display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: center;
+  .vs-strike-now {
+    text-align: center; margin-top: 50px;
   }
-  @media (max-width: 720px) { .guarantee-card { grid-template-columns: 1fr; text-align: center; padding: 28px; } }
+  .vs-strike { font-size: 30px; color: rgba(255,255,255,0.4); text-decoration: line-through; font-weight: 700; }
+  .vs-now {
+    font-size: clamp(96px, 14vw, 168px); font-weight: 900; line-height: 1;
+    background: linear-gradient(120deg, #ffd86b 0%, var(--mv-orange-bright) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 8px 0; letter-spacing: -0.05em;
+  }
+  .vs-savings {
+    display: inline-block;
+    background: rgba(255,216,107,0.2); color: #ffd86b;
+    border: 2px solid rgba(255,216,107,0.4);
+    font-weight: 800; font-size: 16px;
+    padding: 10px 22px; border-radius: 999px;
+    margin: 8px 0 24px;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+
+  /* Guarantee */
+  .guarantee-card {
+    max-width: 760px; margin: 0 auto;
+    background: var(--mv-brand-light);
+    border: 2px solid #eed8fe;
+    border-radius: 24px; padding: 40px;
+    display: grid; grid-template-columns: 100px 1fr; gap: 28px; align-items: center;
+  }
+  @media (max-width: 720px) { .guarantee-card { grid-template-columns: 1fr; text-align: center; padding: 32px; } }
   .guarantee-icon {
-    width: 80px; height: 80px; border-radius: 50%;
-    background: var(--mv-brand); color: #fff;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--mv-brand) 0%, var(--mv-pink) 100%); color: #fff;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 8px 20px rgba(122,18,212,0.25);
+    box-shadow: 0 12px 28px rgba(122,18,212,0.3);
   }
   @media (max-width: 720px) { .guarantee-icon { margin: 0 auto; } }
 
-  /* Order menu — original Mindvalley design */
-  .vip-order { max-width: 540px; margin: 0 auto; }
-  .vip-order-card {
-    background: #fff; border-radius: 24px; padding: 36px 40px 32px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  /* Order menu */
+  .order-bg {
+    background: linear-gradient(180deg, var(--mv-brand-light) 0%, #fff 100%);
   }
-  .vip-order-included { padding: 14px 18px; background: var(--mv-grey-100); border-radius: 12px; margin-bottom: 22px; }
-  .vip-order-included-label { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mv-text-muted); margin-bottom: 8px; }
-  .vip-order-included ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-  .vip-order-included li { font-size: 13px; color: var(--mv-text); padding-left: 18px; position: relative; line-height: 1.4; }
-  .vip-order-included li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--mv-green); font-weight: 700; }
-  .vip-order-strike { font-size: 30px; font-weight: 700; color: #979ca5; text-decoration: line-through; text-decoration-thickness: 2px; margin-bottom: 4px; letter-spacing: -0.02em; text-align: right; }
-  .vip-order-now { font-size: 88px; font-weight: 800; color: var(--mv-text); line-height: 1; letter-spacing: -0.04em; margin: 0 0 14px; text-align: right; }
-  .vip-order-renewal { font-size: 14px; color: var(--mv-text-muted); margin-bottom: 24px; text-align: right; }
-  .vip-order-guarantee { margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; color: var(--mv-text); font-weight: 500; }
+  .vip-order { max-width: 580px; margin: 0 auto; }
+  .vip-order-card {
+    background: #fff; border-radius: 28px; padding: 44px 44px 36px;
+    box-shadow: 0 20px 60px rgba(122,18,212,0.18), 0 1px 3px rgba(0,0,0,0.06);
+    border: 2px solid var(--mv-brand-light);
+    position: relative; overflow: hidden;
+  }
+  .vip-order-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+    background: linear-gradient(90deg, var(--mv-brand), var(--mv-pink), var(--mv-orange));
+  }
+  .vip-order-included {
+    padding: 18px 22px; background: var(--mv-grey-100);
+    border-radius: 14px; margin-bottom: 24px;
+  }
+  .vip-order-included-label { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mv-text-muted); margin-bottom: 10px; }
+  .vip-order-included ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+  .vip-order-included li { font-size: 14px; color: var(--mv-text); padding-left: 22px; position: relative; line-height: 1.45; font-weight: 500; }
+  .vip-order-included li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--mv-green); font-weight: 800; font-size: 16px; }
+  .vip-order-strike { font-size: 34px; font-weight: 800; color: #979ca5; text-decoration: line-through; text-decoration-thickness: 3px; margin-bottom: 4px; letter-spacing: -0.02em; text-align: right; }
+  .vip-order-now {
+    font-size: 120px; font-weight: 900; color: var(--mv-text);
+    line-height: 0.9; letter-spacing: -0.05em; margin: 0 0 8px; text-align: right;
+    background: linear-gradient(180deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .vip-order-renewal { font-size: 14px; color: var(--mv-text-muted); margin-bottom: 26px; text-align: right; font-weight: 500; }
+  .vip-order-guarantee { margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; color: var(--mv-text); font-weight: 700; }
   .vip-order-payments { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; flex-wrap: wrap; }
   .vip-order-pay { display: inline-flex; align-items: center; justify-content: center; height: 38px; min-width: 56px; padding: 0 12px; background: #fff; border: 1px solid var(--mv-grey-250); border-radius: 8px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
   .vip-order-stripe { margin-top: 14px; text-align: center; font-size: 12px; color: var(--mv-text-muted); font-weight: 500; }
   .vip-order-secure { margin-top: 18px; display: flex; align-items: center; gap: 12px; justify-content: center; font-size: 13px; color: var(--mv-text-muted); max-width: 460px; margin-left: auto; margin-right: auto; }
   .vip-order-secure-icon { width: 32px; height: 32px; border: 1.5px solid var(--mv-grey-250); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: var(--mv-text-muted); }
 
-  /* Skip link */
-  .vip-skip { display: block; text-align: center; padding: 24px; font-size: 14px; color: var(--mv-text-muted); text-decoration: underline; }
+  /* Skip + footer */
+  .vip-skip { display: block; text-align: center; padding: 28px; font-size: 14px; color: var(--mv-text-muted); text-decoration: underline; }
   .vip-skip:hover { color: var(--mv-text); }
-
-  /* Footer */
   .vip-footer { padding: 32px 24px; text-align: center; font-size: 13px; color: #979ca5; background: #fff; border-top: 1px solid var(--mv-grey-150); }
   .vip-footer a { color: var(--mv-text-muted); text-decoration: none; margin: 0 8px; }
 
-  /* Hero teacher avatar stack */
-  .hero-teachers-stack { display: flex; align-items: center; }
-  .hero-teachers-stack img { width: 44px; height: 44px; border-radius: 50%; border: 2.5px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); object-fit: cover; margin-left: -10px; }
-  .hero-teachers-stack img:first-child { margin-left: 0; }
-
-  /* Brand badge variants */
-  .badge-brand-purple {
-    background: var(--mv-brand-light); color: var(--mv-brand);
-    font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 7px 14px; border-radius: 999px; display: inline-block;
-  }
-
-  /* Hero gradient bg */
-  .hero-bg {
-    background:
-      radial-gradient(60% 70% at 100% 0%, rgba(155,55,242,0.18), transparent 60%),
-      radial-gradient(50% 50% at 0% 100%, rgba(247,44,132,0.12), transparent 60%),
-      linear-gradient(180deg, #ffffff 0%, #faf6ff 100%);
-  }
-
-  /* Gradient em */
-  .grad-em {
-    background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: normal;
-  }
-  .grad-em-gold {
-    background: linear-gradient(120deg, #ffd86b 0%, var(--mv-orange-bright) 100%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-style: normal;
-  }
+  /* TR-style emphasis utilities */
+  .tr-italic { font-style: italic; color: var(--mv-brand); font-weight: 700; }
+  .tr-strong { font-weight: 800; color: var(--mv-text); }
+  .tr-pink { color: var(--mv-pink); font-weight: 800; }
 </style>
 </head>
 <body class="bg-white">
 
-<!-- ============= TOP CHROME ============= -->
+<!-- TOP CHROME -->
 <header class="vip-topbar">
   <div class="vip-topbar-inner">
     <img src="https://res.cloudinary.com/mindvalley/image/upload/v1640746015/mvcom/mv-logo.svg" alt="Mindvalley" style="height: 22px;" />
@@ -305,10 +386,10 @@
   </div>
 </header>
 
-<!-- ============= COUNTDOWN ============= -->
+<!-- COUNTDOWN -->
 <section data-name="Countdown" class="pb-Container countdown min-h-fit mv-top__banner">
   <div class="countdown-bar">
-    <span><strong>Early Bird Wealth Codes pricing</strong> — closes when you leave this page</span>
+    <span>⚡ <strong>This page expires when you leave.</strong> $1 access closes in:</span>
     <span class="countdown-units" id="countdown">
       <span class="countdown-unit">00<span class="countdown-unit-label">D</span></span>
       <span class="countdown-unit">00<span class="countdown-unit-label">H</span></span>
@@ -318,7 +399,7 @@
   </div>
 </section>
 
-<!-- ============= BREADCRUMB (chevron progress, native MV component) ============= -->
+<!-- BREADCRUMB -->
 <section data-name="Breadcrumb" class="pb-Container breadcrumb min-h-fit">
   <section class="progress-bar overflow-hidden">
     <div class="flex upsell-bar-container overflow-hidden uppercase">
@@ -331,415 +412,299 @@
       <div class="mv-progress-bar w-1/3 lg_text-center md_py-6 flex items-center justify-center orange">
         <span class="progress-bar--num">2</span>
         <div class="progress-bar--label label text-cool-grey-500 mv-type--caption mt-0">
-          <span class="hidden md_inline-block">Add Wealth Codes</span>
+          <span class="hidden md_inline-block">Add Wealth Codes — $1</span>
         </div>
       </div>
       <div class="mv-progress-bar w-1/3 lg_text-center md_py-6 flex items-center justify-center">
         <span class="progress-bar--num">3</span>
         <div class="progress-bar--label label text-cool-grey-500 mv-type--caption mt-0">
-          <span class="hidden md_inline-block">Summit Information</span>
+          <span class="hidden md_inline-block">Summit Confirmation</span>
         </div>
       </div>
     </div>
   </section>
 </section>
 
-<!-- ============= HERO ============= -->
+<!-- HERO -->
 <section data-name="Hero" class="pb-Container hero min-h-fit hero-bg">
-  <div class="pt-8 lg_pt-16 pb-12 lg_pb-16 min-h-fit">
-    <div class="w-full relative mv-container min-h-fit">
-      <div class="pb-6 flex items-center justify-center min-h-fit">
-        <div class="badge badge--large badge--plain-pink badge--font-pink">
-          <p class="inline-grid">✓ Free ticket claimed · Now go deeper</p>
-        </div>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--titlebold2 text-cool-grey-700 md_text-center">
-        <h1>You're in for the summit. <em class="grad-em">Wealth Codes</em> is the part most manifestors never solve.</h1>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--title6 md_text-center mt-6 mb-8 w-full md_w-3/4 mx-auto">
-        <p>You're already a manifestor — you wouldn't be here otherwise. You've manifested small things. The wealth keeps stalling. <strong>That's not technique. Wealth has its own wiring</strong> — money trauma installed before you were 7, generational patterns inherited through your line, beliefs the conscious mind can't access. The summit teaches the universal method. <strong>Wealth Codes is built specifically for the one domain 94% of our students came for and never crack alone.</strong></p>
+  <div class="pt-12 lg_pt-20 pb-16 lg_pb-20 min-h-fit">
+    <div class="w-full relative mv-container min-h-fit text-center">
+
+      <p class="hero-pre">⚡ Stop. Read this before you leave.</p>
+
+      <div class="pb-markdown min-h-fit">
+        <h1 class="hero-h1">You came to manifest. <em>Now let's solve the one thing that's been blocking you for years.</em></h1>
       </div>
 
-      <div class="flex flex-col md_flex-row items-center justify-center gap-4 mt-8">
-        <a href="#apply-now" class="vip-cta vip-cta-lg">Add Wealth Codes VIP — $49</a>
-        <span class="mv-type--caption text-cool-grey-500" style="display: inline-flex; align-items: center; gap: 6px;">
+      <div class="pb-markdown min-h-fit mv-type--title6 mt-6 mb-6 w-full md_w-3/4 mx-auto" style="font-size: 20px; line-height: 1.5;">
+        <p>You're already a manifestor. You've manifested small things. But the <strong>big one</strong> — the wealth that finally changes everything — keeps stalling. <span class="tr-italic">That's not your fault.</span> It's wiring. And in the next 3 days, with the right people in the room with you, <strong>that wiring rewrites itself.</strong></p>
+      </div>
+
+      <div class="pb-markdown min-h-fit mt-2 mb-8" style="font-size: 22px; font-weight: 700; color: var(--mv-text);">
+        <p>For the next 15 minutes, you can add the <span class="tr-pink">Wealth Codes VIP</span> for the price of a snack.</p>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 mt-8">
+        <a href="#apply-now" class="vip-cta vip-cta-mega">YES — UNLOCK WEALTH CODES FOR $1</a>
+        <span style="font-size: 14px; color: var(--mv-text-muted); display: inline-flex; align-items: center; gap: 8px;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          15-day refund · One click
+          15-day money-back · No emails, no questions
         </span>
       </div>
 
-      <div class="mt-12 pt-6" style="border-top: 1px solid var(--mv-grey-250); display: flex; flex-direction: column; md_flex-row: row; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center; text-align: center;">
-        <p class="mv-type--overline text-cool-grey-600" style="margin-bottom: 12px;">WEALTH CODES FACULTY</p>
-        <div style="display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
-          <div class="hero-teachers-stack">
-            <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
-            <img src="assets/teachers/regan-large.webp" alt="Regan Hillyer" />
-            <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
-            <img src="assets/teachers/david-ghiyam-large.webp" alt="David Ghiyam" />
-          </div>
-          <span class="mv-type--body text-cool-grey-600"><strong style="color: var(--mv-text);">Vishen · Regan Hillyer · Paul McKenna, Ph.D. · David Ghiyam</strong></span>
-        </div>
+      <div class="hero-stat-row">
+        <span class="pip"></span>
+        <span style="font-size: 13px; font-weight: 600; color: var(--mv-text);">2,847 attendees just upgraded · Spots filling now</span>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============= THE WOUND (about wealth specifically) ============= -->
-<section data-name="The Wealth Wound" class="pb-Container wealth-wound min-h-fit mv-section__gutter">
-  <div class="mv-container min-h-fit">
-    <div class="text-center mb-10">
-      <span class="badge-brand-purple">The disappointed believer</span>
-      <div class="pb-markdown min-h-fit mv-type--title2 text-cool-grey-700 mt-4 mb-3">
-        <h2>Why wealth specifically is the one that won't budge.</h2>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--body text-cool-grey-600 mt-2" style="max-width: 720px; margin: 0 auto;">
-        <p>You've manifested parking spots, chance encounters, even the right job at the right time. Money is different. <strong>Wealth has more wiring than any other domain</strong> — generational trauma, scarcity programming, "money is the root of evil" stories, the body's deep "more = unsafe" reflex. None of it dissolves through visualisation.</p>
-      </div>
-    </div>
-
-    <div class="wound-grid mt-10">
-      <div class="wound-col wound-col-old">
-        <div class="wound-col-label">Where wealth keeps stalling for you</div>
-        <ul>
-          <li>You manifest other things, but money "almost works."</li>
-          <li>You hit a number. Then unconsciously self-sabotage.</li>
-          <li>You feel guilty when you receive — even small amounts.</li>
-          <li>The body tightens around money conversations.</li>
-          <li>You believe in abundance. Your bank account doesn't.</li>
-        </ul>
-      </div>
-      <div class="wound-col wound-col-new">
-        <div class="wound-col-label">What changes when the wiring is rewritten</div>
-        <ul>
-          <li>"Money is something I receive, not chase."</li>
-          <li>"My nervous system feels safe holding more."</li>
-          <li>"I dissolved the generational pattern. I am the unbroken link."</li>
-          <li>"I expect wealth — not because I forced it, because I rewired it."</li>
-          <li>"I am someone wealth flows toward."</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============= THE VIP EXPERIENCE (positioning) ============= -->
-<section id="program-info" data-name="The VIP experience" class="pb-Container the-vip-experience min-h-fit mv-section__gutter mv-container pb-navigable">
-  <div class="grid grid-cols-12 min-h-fit">
-    <div class="lg_col-span-10 lg_col-start-2 col-span-12 text-cool-grey-700 min-h-fit text-center">
-      <div class="pb-markdown min-h-fit mv-type--overline text-cool-grey-600 mb-2">
-        <p>WHAT MAKES WEALTH CODES VIP DIFFERENT</p>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--title2 mb-6">
-        <h3>The summit teaches the method.</h3>
-        <p>Wealth Codes <em class="grad-em">rewires the one domain</em> the method alone can't reach.</p>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--body mb-3" style="max-width: 760px; margin: 0 auto;">
-        <p>Free attendees learn how manifestation works. <strong>Wealth Codes VIP gets your body to actually receive money</strong> — through three live sessions designed specifically for the wealth domain: a hypnotherapy session with Paul McKenna that dissolves money trauma installed before you were 7, a deep dive with Vishen and Regan into wealth-identity work, and live Q&amp;A access to ask the question that's been stuck for years.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============= 3-PHASE WEALTH CODES METHOD ============= -->
-<section data-name="Wealth Codes Method" class="pb-Container wealth-codes-method min-h-fit mv-section__gutter" style="background: var(--mv-grey-100);">
-  <div class="mv-container min-h-fit">
-    <div class="text-center mb-10">
-      <span class="badge-brand-purple">Wealth Codes · 3-phase rewiring</span>
-      <div class="pb-markdown min-h-fit mv-type--title3 text-cool-grey-700 mt-4 mb-3">
-        <h2>Three layers between you and the wealth you've been asking for.</h2>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--body text-cool-grey-600 mt-2" style="max-width: 700px; margin: 0 auto;">
-        <p>The summit applies Clear · Align · Receive to manifestation broadly. <strong>Wealth Codes applies it specifically to money</strong> — with the three teachers most equipped for each layer.</p>
-      </div>
-    </div>
-
-    <div class="wc-phases mt-10">
-      <div class="wc-phase">
-        <div class="wc-phase-num">01</div>
-        <div class="pb-markdown mv-type--title5"><h3>Clear the money blocks</h3></div>
-        <div class="wc-phase-tag">The conscious + subconscious wealth stories</div>
-        <div class="pb-markdown mv-type--body">
-          <p>"I don't deserve it." "Money is the root of evil." "My family doesn't have wealthy people." Cleared at identity level — not just intellectually addressed.</p>
-        </div>
-        <div class="wc-phase-teachers">
+      <div class="mt-12 pt-8" style="border-top: 1px solid var(--mv-grey-250); display: flex; flex-direction: column; align-items: center; gap: 14px;">
+        <p class="mv-type--overline text-cool-grey-600">YOUR WEALTH CODES TEACHERS</p>
+        <div class="hero-teachers-stack">
           <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
-          <span><strong>Vishen</strong> · Money Blocks &amp; Generational Wealth Trauma session</span>
-        </div>
-      </div>
-
-      <div class="wc-phase">
-        <div class="wc-phase-num">02</div>
-        <div class="pb-markdown mv-type--title5"><h3>Align your wealth identity</h3></div>
-        <div class="wc-phase-tag">Epigenetic + nervous system wealth re-coding</div>
-        <div class="pb-markdown mv-type--body">
-          <p>The body's wealth set-point — what's wired into your cells from family lineage and lived experience. Replaced with the identity of someone who receives easily.</p>
-        </div>
-        <div class="wc-phase-teachers">
-          <img src="assets/teachers/regan-large.webp" alt="Regan" />
+          <img src="assets/teachers/regan-large.webp" alt="Regan Hillyer" />
+          <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
           <img src="assets/teachers/david-ghiyam-large.webp" alt="David Ghiyam" />
-          <span><strong>Regan</strong> · Wealth Timeline Blueprint · <strong>David Ghiyam</strong> · Wealth consciousness</span>
         </div>
+        <span class="mv-type--body" style="color: var(--mv-text-muted);"><strong style="color: var(--mv-text);">Vishen · Regan Hillyer · Paul McKenna, Ph.D. · David Ghiyam</strong></span>
       </div>
 
-      <div class="wc-phase">
-        <div class="wc-phase-num">03</div>
-        <div class="pb-markdown mv-type--title5"><h3>Receive at the subconscious</h3></div>
-        <div class="wc-phase-tag">Where the deepest money wiring lives</div>
-        <div class="pb-markdown mv-type--body">
-          <p>Money beliefs installed before age 7 don't move with affirmations. They move under hypnosis. <strong>This is the layer 33% of our students never reach.</strong></p>
-        </div>
-        <div class="wc-phase-teachers">
-          <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
-          <span><strong>Paul McKenna, Ph.D.</strong> · 1-Hour Live Wealth Hypnotherapy</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ============= WHAT'S INCLUDED ============= -->
-<section id="apply-now-trigger" data-name="What's included" class="pb-Container whats-included min-h-fit mv-section__gutter pb-navigable">
+<!-- WOUND — TR style emotional dramatic single-column -->
+<section data-name="The Wound" class="pb-Container wound min-h-fit mv-section__gutter wound-bg">
   <div class="mv-container min-h-fit">
     <div class="text-center mb-10">
-      <span class="badge-brand-purple">What you get</span>
-      <div class="pb-markdown min-h-fit mv-type--title3 text-cool-grey-700 mt-4 mb-3">
-        <h2>Four live experiences, all wealth-coded.</h2>
-      </div>
-      <div class="pb-markdown min-h-fit mv-type--body text-cool-grey-600 mt-2" style="max-width: 700px; margin: 0 auto;">
-        <p>Each one targets a different layer of the wealth wiring. Together they're the complete reset most people pay tens of thousands for in private work.</p>
-      </div>
+      <span class="tr-badge tr-badge-pink">⚡ Read this slowly</span>
     </div>
 
-    <div class="wc-features mt-10">
+    <p class="wound-quote">
+      You've been doing this work for <em>years</em>. Vision boards. Affirmations. Meditation. You've watched <strong>other people</strong> manifest their dream lives — businesses, partners, freedom, wealth. And somewhere, quietly, a voice in you wonders: <em>"why does it work for them and not me?"</em>
+    </p>
 
-      <div class="wc-feature">
-        <span class="wc-feature-tag hero">⚡ The keystone</span>
-        <div class="pb-markdown mv-type--title5"><h3>1-Hour Live Wealth Hypnotherapy with Paul McKenna, Ph.D.</h3></div>
-        <div class="pb-markdown mv-type--body">
-          <p>Paul guides a live hypnotherapy session targeting money trauma installed before you were 7 — at the subconscious level, where the wiring actually lives.</p>
-        </div>
-        <ul>
-          <li>Release the deep-rooted money blocks installed in childhood</li>
-          <li>Reprogram the nervous system to expect wealth, not flinch from it</li>
-          <li>Leave in a fundamentally different relationship with abundance</li>
-        </ul>
-        <div class="wc-feature-teachers">
-          <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
-          <div>
-            <div class="mv-type--title8" style="font-weight: 600;">Paul McKenna, Ph.D.</div>
-            <div class="mv-type--caption text-cool-grey-500">15M+ books sold · Featured by The Times</div>
-          </div>
-        </div>
+    <p class="wound-quote" style="margin-top: 32px;">
+      Here's the truth — <em>nothing is broken about you.</em> You are already a manifestor. <strong>Your nervous system is just running an older version of you</strong> — one that learned, before you were 7 years old, that receiving wasn't safe. <strong>That's the only thing standing between you and the wealth you've been asking for.</strong>
+    </p>
+
+    <div class="wound-stat-grid">
+      <div class="wound-stat">
+        <div class="wound-stat-num">94%</div>
+        <div class="wound-stat-label">of summit attendees came for <strong style="color: var(--mv-text);">wealth manifestation</strong></div>
       </div>
-
-      <div class="wc-feature">
-        <span class="wc-feature-tag">Identity install</span>
-        <div class="pb-markdown mv-type--title5"><h3>Wealth Identity Deep Dive — Live with Vishen &amp; Regan</h3></div>
-        <div class="pb-markdown mv-type--body">
-          <p>The advanced principles of manifesting wealth at the identity level. From "I'm trying to manifest wealth" to "I am someone wealth flows to."</p>
-        </div>
-        <ul>
-          <li>A personalised wealth blueprint mapped to your number</li>
-          <li>Regan's signature Wealth Timeline Blueprint, live and interactive</li>
-          <li>Vishen's advanced frameworks for accelerating wealth manifestation</li>
-        </ul>
-        <div class="wc-feature-teachers">
-          <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
-          <img src="assets/teachers/regan-large.webp" alt="Regan" style="margin-left: -12px; border: 2px solid #fff;" />
-          <div>
-            <div class="mv-type--title8" style="font-weight: 600;">Vishen &amp; Regan Hillyer</div>
-            <div class="mv-type--caption text-cool-grey-500">Live deep-dive · VIP-only access</div>
-          </div>
-        </div>
+      <div class="wound-stat">
+        <div class="wound-stat-num">33%</div>
+        <div class="wound-stat-label">stay stuck on <strong style="color: var(--mv-text);">"I don't deserve it"</strong> — wired before age 7</div>
       </div>
-
-      <div class="wc-feature">
-        <span class="wc-feature-tag">Direct access</span>
-        <div class="pb-markdown mv-type--title5"><h3>2× Live VIP Wealth Q&amp;A</h3></div>
-        <div class="pb-markdown mv-type--body">
-          <p>Most people leave a summit with the same questions about money they came in with. You won't. Two dedicated wealth-specific Q&amp;A sessions.</p>
-        </div>
-        <ul>
-          <li>Ask Vishen and Regan directly about your specific wealth situation</li>
-          <li>Hear other VIPs' wealth blocks resolved live (often more powerful than your own)</li>
-          <li>Recordings included if you can't make it live</li>
-        </ul>
-        <div class="wc-feature-teachers">
-          <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
-          <img src="assets/teachers/regan-large.webp" alt="Regan" style="margin-left: -12px; border: 2px solid #fff;" />
-          <div>
-            <div class="mv-type--title8" style="font-weight: 600;">Vishen &amp; Regan</div>
-            <div class="mv-type--caption text-cool-grey-500">Day 1 + Day 2 · Wealth-specific</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="wc-feature">
-        <span class="wc-feature-tag">VIP container</span>
-        <div class="pb-markdown mv-type--title5"><h3>The Wealth Codes Lounge + 30-Day Replays</h3></div>
-        <div class="pb-markdown mv-type--body">
-          <p>Your own private Zoom room — smaller, more intimate, away from the general crowd. The room where the people stepping into 7-figure identity already are.</p>
-        </div>
-        <ul>
-          <li>Watch all 3 days in a private Wealth Codes-only Zoom room</li>
-          <li>HD recordings of every session organised by day</li>
-          <li>30 days of replay access to integrate after the summit</li>
-        </ul>
-        <div class="wc-feature-teachers" style="border-top: none; padding-top: 0;">
-          <span class="mv-type--caption text-cool-grey-500">Available immediately upon upgrade</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============= MCKENNA SPOTLIGHT ============= -->
-<section data-name="McKenna Spotlight" class="pb-Container mckenna-spotlight min-h-fit mv-section__gutter mckenna" style="padding-top: 80px; padding-bottom: 80px;">
-  <div class="mv-container min-h-fit" style="position: relative;">
-    <div class="mckenna-grid">
-      <div>
-        <div class="badge-brand-purple" style="background: rgba(255,255,255,0.1); color: #fff;">The wealth keystone</div>
-        <div class="pb-markdown mv-type--title2 mt-4" style="color: #fff;">
-          <h2>33% of our students stay stuck on the same wealth block. <em class="grad-em-gold">This session unlocks it.</em></h2>
-        </div>
-        <div class="pb-markdown mv-type--body mt-4" style="color: rgba(255,255,255,0.85);">
-          <p>The #1 wealth block isn't lack of skill or technique. It's the silent wire that says <em>"I don't deserve money like that"</em> — installed before age 7, running on autopilot every time you try to receive. <strong>Visualisation can't reach this layer. Affirmations don't override it.</strong> Hypnotherapy is the one tool that touches it directly.</p>
-        </div>
-        <ul class="mckenna-bullets">
-          <li>15M+ books sold across 35 countries</li>
-          <li>Standard 1-on-1 hypnotherapy session: $1,500+</li>
-          <li>Has worked with celebrities, CEOs, and Olympic athletes on subconscious change</li>
-          <li>Featured by The Times as one of the world's most important modern gurus</li>
-        </ul>
-        <div class="mckenna-anchor">
-          <strong>$1,500</strong> — what one private hypnotherapy session with Paul costs alone. With Wealth Codes VIP, you get this session plus everything else for <strong>$49.</strong>
-        </div>
-      </div>
-      <div class="mckenna-portrait">
-        <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
+      <div class="wound-stat">
+        <div class="wound-stat-num">3 days</div>
+        <div class="wound-stat-label">is all it takes when you're <strong style="color: var(--mv-text);">in the right room with the right teachers</strong></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============= STORIES (testimonial) ============= -->
-<section data-name="Stories" class="pb-Container stories min-h-fit mv-section__gutter" style="background: var(--mv-grey-100);">
+<!-- THE 3 BONUSES -->
+<section id="apply-now-trigger" data-name="Bonuses" class="pb-Container bonuses min-h-fit mv-section__gutter pb-navigable bonuses-bg">
   <div class="mv-container min-h-fit">
-    <div class="text-center mb-8">
-      <span class="badge-brand-purple">Past Wealth Codes VIP</span>
-      <div class="pb-markdown mv-type--title3 text-cool-grey-700 mt-4 mb-3">
-        <h2>What changed when they did the work.</h2>
+    <div class="text-center mb-12">
+      <span class="tr-badge">3 reasons VIP is the difference</span>
+      <div class="pb-markdown min-h-fit mt-6">
+        <h2 style="font-size: clamp(36px, 4.5vw, 56px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800; margin: 0 0 18px;">Free attendees watch the summit.<br/>VIPs are <em style="background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-style: normal;">in the room where it actually happens.</em></h2>
+      </div>
+      <div class="pb-markdown mv-type--body" style="max-width: 680px; margin: 0 auto; font-size: 18px;">
+        <p>You don't need more information. You need <strong>three specific experiences</strong> the free summit doesn't include — designed to take wealth manifestation from your notebook into your nervous system.</p>
       </div>
     </div>
-    <div class="wc-testimonial">
-      <div class="wc-testimonial-photo">SM</div>
-      <div>
-        <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mv-brand); display: inline-block;">Wealth breakthrough</div>
-        <span class="wc-testimonial-stars" style="margin-left: 10px;">★★★★★</span>
-        <div class="pb-markdown mv-type--title6 mt-2 mb-3" style="line-height: 1.45;">
-          <p>"I'd done every manifesting course out there. Vision boards, affirmations, all of it. The McKenna hypnosis is what actually changed something in my body. I felt the shift the same week. Three months later my income had doubled — not because I did more, because something in me stopped flinching when money showed up."</p>
-        </div>
-        <div class="mv-type--body text-cool-grey-600">
-          <strong style="color: var(--mv-text);">[Real member name]</strong> · Past Manifesting Summit Wealth Codes VIP
+
+    <div class="bonus-stack">
+
+      <!-- BONUS 1: THE WEALTH ROOM -->
+      <div class="bonus-card">
+        <div class="bonus-card-grid">
+          <div class="bonus-card-visual">
+            <span class="bonus-card-num">⚡ Bonus #1</span>
+            <h3 class="bonus-card-name">The Wealth Frequency Room</h3>
+            <span class="bonus-card-value">Standalone value: <strong>$1,500</strong></span>
+          </div>
+          <div class="bonus-card-body">
+            <h4 class="bonus-card-headline">Where we go DEEPER on <em>YOUR</em> specific wealth blocks — at the subconscious level.</h4>
+            <p class="bonus-card-desc">
+              This isn't a lecture. It's a <strong>private live transformation room</strong> — exclusive to VIPs — where Paul McKenna, Vishen, and Regan walk you through the deep wealth-block dissolution work that doesn't fit on the main stage. Money trauma installed before you were 7. Generational wealth patterns. The "I don't deserve it" wire. <span class="tr-italic">The layer affirmations don't reach.</span>
+            </p>
+            <ul class="bonus-card-list">
+              <li>1-hour live wealth hypnotherapy with <strong>Paul McKenna, Ph.D.</strong> — dissolves money trauma at the subconscious</li>
+              <li>Wealth identity install with <strong>Vishen &amp; Regan</strong> — from "trying to manifest wealth" to "I AM someone wealth flows to"</li>
+              <li>Generational money trauma clearing — break the lineage pattern in YOUR body, in real time</li>
+            </ul>
+            <div class="bonus-card-teachers">
+              <img src="assets/teachers/paul-mckenna-large.jpg" alt="Paul McKenna" />
+              <img src="assets/teachers/vishen-large.webp" alt="Vishen" style="margin-left: -12px; border: 2px solid #fff;" />
+              <img src="assets/teachers/regan-large.webp" alt="Regan" style="margin-left: -12px; border: 2px solid #fff;" />
+              <span><strong style="color: var(--mv-text);">Paul McKenna · Vishen · Regan Hillyer</strong></span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- BONUS 2: LIVE Q&A -->
+      <div class="bonus-card">
+        <div class="bonus-card-grid">
+          <div class="bonus-card-visual gold">
+            <span class="bonus-card-num">⚡ Bonus #2</span>
+            <h3 class="bonus-card-name">Intimate Live Q&amp;A</h3>
+            <span class="bonus-card-value">Standalone value: <strong>$2,000</strong></span>
+          </div>
+          <div class="bonus-card-body">
+            <h4 class="bonus-card-headline">Get <em>intimate</em> with Vishen and Regan. Ask them about <strong>YOUR</strong> specific blocker.</h4>
+            <p class="bonus-card-desc">
+              Most people leave a summit with the same questions they came in with. <strong>Not VIPs.</strong> Two dedicated live Q&amp;A sessions where you ask Vishen and Regan directly about the exact blocker that's been keeping <em>you</em> stuck for years. <span class="tr-italic">The closest thing to a private session — without the $5,000+ price tag.</span>
+            </p>
+            <ul class="bonus-card-list">
+              <li>Two live Q&amp;A sessions — Day 1 evening + Day 2 — for VIPs only</li>
+              <li>Submit your specific question; have it answered live by the teachers</li>
+              <li>Hear other VIPs' wealth blocks dissolved in real time (often more powerful than your own)</li>
+              <li>HD recordings included if you can't make it live</li>
+            </ul>
+            <div class="bonus-card-teachers">
+              <img src="assets/teachers/vishen-large.webp" alt="Vishen" />
+              <img src="assets/teachers/regan-large.webp" alt="Regan" style="margin-left: -12px; border: 2px solid #fff;" />
+              <span><strong style="color: var(--mv-text);">Vishen &amp; Regan Hillyer</strong> · Day 1 + Day 2 · VIP-only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BONUS 3: THE VIP LOUNGE -->
+      <div class="bonus-card">
+        <div class="bonus-card-grid">
+          <div class="bonus-card-visual green">
+            <span class="bonus-card-num">⚡ Bonus #3</span>
+            <h3 class="bonus-card-name">The VIP Lounge</h3>
+            <span class="bonus-card-value">Standalone value: <strong>$500</strong></span>
+          </div>
+          <div class="bonus-card-body">
+            <h4 class="bonus-card-headline">Connect with the room that <em>chose to go all in.</em> Your new tribe of high-frequency creators.</h4>
+            <p class="bonus-card-desc">
+              You become who you spend time with. The general summit room is open to everyone — including people just curious. <strong>The VIP Lounge is different.</strong> A private, smaller Zoom room with the people who chose this seriously. <span class="tr-italic">Manifestors stepping into 7-figure identity. Founders. Coaches. Healers. Your tribe.</span>
+            </p>
+            <ul class="bonus-card-list">
+              <li>Private VIP-only Zoom room — watch all 3 days alongside committed manifestors</li>
+              <li>Real-time chat with other VIPs — share insights, accountability, breakthroughs</li>
+              <li>Smaller, more intimate experience — the room behind the room</li>
+              <li>30-day HD replay access so the work integrates over time</li>
+            </ul>
+            <div class="bonus-card-teachers">
+              <span style="font-size: 14px; color: var(--mv-text-muted);"><strong style="color: var(--mv-text);">Available immediately upon upgrade</strong> · Active during all 3 summit days + 30 days after</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="wc-testimonial-note">
-      ⚠ Placeholder — pull a real wealth-breakthrough story from past Summit VIP cohort or <code>stories.mindvalley.com</code>.
+
+    <div class="text-center mt-10">
+      <a href="#apply-now" class="vip-cta vip-cta-mega">YES — I WANT ALL 3 FOR $1</a>
     </div>
   </div>
 </section>
 
-<!-- ============= VALUE STACK ============= -->
-<section data-name="Value Stack" class="pb-Container value-stack-section min-h-fit value-stack" style="padding-top: 80px; padding-bottom: 80px;">
+<!-- VALUE STACK -->
+<section data-name="Value Stack" class="pb-Container value-stack-section min-h-fit vs-bg" style="padding-top: 100px; padding-bottom: 100px;">
   <div class="mv-container min-h-fit" style="position: relative;">
-    <div class="text-center mb-8">
-      <div class="badge-brand-purple" style="background: rgba(255,216,107,0.15); color: #ffd86b;">The math, plain</div>
-      <div class="pb-markdown mv-type--title2 mt-4 mb-3" style="color: #fff;">
-        <h2>$4,000 of access. <em class="grad-em-gold">For $49.</em></h2>
+    <div class="text-center mb-10">
+      <span class="tr-badge tr-badge-gold">The math</span>
+      <div class="pb-markdown mt-5 mb-3">
+        <h2 class="vs-h2">$4,000 of access. <em>For ONE dollar.</em></h2>
       </div>
-      <div class="pb-markdown mv-type--body mt-2" style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
-        <p>Here's what these experiences cost individually if you bought each on its own.</p>
+      <div class="pb-markdown mv-type--body" style="color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; font-size: 18px;">
+        <p>Yes — this is real. Yes — you're not misreading it. Here's exactly what these experiences cost individually:</p>
       </div>
     </div>
 
     <div class="value-table">
       <div class="value-row">
-        <div class="value-row-label">1-Hour Wealth Hypnotherapy with Paul McKenna<span class="meta">Standard 1-on-1 rate</span></div>
+        <div class="value-row-label">The Wealth Frequency Room (1-Hour McKenna Hypnotherapy + Vishen &amp; Regan Deep Dive)<span class="meta">Standard 1-on-1 hypnotherapy: $1,500</span></div>
         <div class="value-row-amt">$1,500</div>
       </div>
       <div class="value-row">
-        <div class="value-row-label">Wealth Identity Deep Dive with Vishen &amp; Regan<span class="meta">Private session equivalent</span></div>
-        <div class="value-row-amt">$1,200</div>
+        <div class="value-row-label">2× Intimate Live Q&amp;A with Vishen &amp; Regan<span class="meta">Direct teacher access · $1,000 per session</span></div>
+        <div class="value-row-amt">$2,000</div>
       </div>
       <div class="value-row">
-        <div class="value-row-label">2× Live Wealth Q&amp;A with Vishen &amp; Regan<span class="meta">$500 each</span></div>
-        <div class="value-row-amt">$1,000</div>
-      </div>
-      <div class="value-row">
-        <div class="value-row-label">Wealth Codes Lounge + 30-Day Replays<span class="meta">Premium event-tier add-on</span></div>
-        <div class="value-row-amt">$300</div>
+        <div class="value-row-label">The VIP Lounge — Private Zoom + 30-Day Replays<span class="meta">Premium event-tier access</span></div>
+        <div class="value-row-amt">$500</div>
       </div>
       <div class="value-row total">
         <div class="value-row-label">Total à-la-carte value</div>
         <div class="value-row-amt">$4,000</div>
       </div>
     </div>
+
+    <div class="vs-strike-now">
+      <div class="vs-strike">$99</div>
+      <div class="vs-now">$1</div>
+      <div class="vs-savings">⚡ You save $3,999 · 99.97% off</div>
+    </div>
+
+    <div class="text-center mt-6">
+      <a href="#apply-now" class="vip-cta vip-cta-mega" style="background: linear-gradient(180deg, #ffd86b 0%, var(--mv-orange-bright) 100%); color: var(--mv-text) !important;">UNLOCK ALL 3 BONUSES FOR $1</a>
+    </div>
   </div>
 </section>
 
-<!-- ============= GUARANTEE ============= -->
+<!-- GUARANTEE -->
 <section data-name="Guarantee" class="pb-Container guarantee min-h-fit mv-section__gutter">
   <div class="mv-container min-h-fit">
     <div class="guarantee-card">
       <div class="guarantee-icon">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
       </div>
       <div>
-        <div class="pb-markdown mv-type--title5 mb-2"><h3>Risk nothing for 15 days.</h3></div>
-        <div class="pb-markdown mv-type--body">
-          <p>Join the live Q&amp;A. Sit in the McKenna hypnosis. Try the Wealth Codes Lounge. If you don't feel a real shift in 15 days, refund yourself in one click — no emails, no questions, no win-back. Just your $49 back.</p>
+        <div class="pb-markdown mv-type--title4 mb-2"><h3 style="font-weight: 800;">Risk literally nothing.</h3></div>
+        <div class="pb-markdown mv-type--body" style="font-size: 17px;">
+          <p>It's <strong>$1.</strong> Less than the tip on a coffee. Sit in the McKenna hypnosis. Show up to the live Q&amp;A. Walk into the VIP Lounge. <strong>If you don't feel a real shift in 15 days, refund yourself in one click.</strong> No emails. No win-back. We just trust you.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============= UPGRADE NOW (order menu) ============= -->
-<section id="apply-now" data-name="Upgrade now" class="pb-Container upgrade-now min-h-fit background-html mv-section__gutter pb-navigable" style="background: linear-gradient(180deg, #faf6ff 0%, #ffffff 100%);">
+<!-- ORDER MENU -->
+<section id="apply-now" data-name="Upgrade now" class="pb-Container upgrade-now min-h-fit order-bg mv-section__gutter pb-navigable">
   <div class="mv-container min-h-fit">
-    <div class="text-center mb-8">
-      <span class="badge-brand-purple">Your one-click decision</span>
-      <div class="pb-markdown mv-type--title2 mt-4 mb-3">
-        <h2>The summit teaches it. <em class="grad-em">Wealth Codes makes it stick.</em></h2>
+    <div class="text-center mb-10">
+      <span class="tr-badge tr-badge-pink">⚡ Your decision</span>
+      <div class="pb-markdown mt-5 mb-3">
+        <h2 style="font-size: clamp(34px, 4.5vw, 52px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 800; margin: 0 0 14px;">It's literally <em style="background: linear-gradient(120deg, var(--mv-brand) 0%, var(--mv-pink) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-style: normal;">one dollar.</em></h2>
+      </div>
+      <div class="pb-markdown mv-type--body" style="font-size: 17px; max-width: 600px; margin: 0 auto;">
+        <p>You spent more on parking. Don't think. <strong>Decide.</strong></p>
       </div>
     </div>
 
     <div class="vip-order">
       <div class="vip-order-card">
-        <div class="pb-markdown mv-type--titlebold4 mb-1"><p>Wealth Codes VIP</p></div>
-        <div class="mv-type--caption text-cool-grey-500" style="margin-bottom: 22px;">Early Bird upgrade — only available on this page</div>
+        <div class="pb-markdown mv-type--titlebold4 mb-1" style="font-weight: 800;"><p>Wealth Codes VIP</p></div>
+        <div class="mv-type--caption text-cool-grey-500" style="margin-bottom: 22px; font-weight: 500;">Tripwire pricing — only on this page · Goes to $99 immediately after</div>
 
         <div class="vip-order-included">
-          <div class="vip-order-included-label">What's included</div>
+          <div class="vip-order-included-label">All 3 bonuses included</div>
           <ul>
-            <li>1-Hour Live Wealth Hypnotherapy with Paul McKenna, Ph.D.</li>
-            <li>Wealth Identity Deep Dive with Vishen &amp; Regan</li>
-            <li>2× Live VIP Wealth Q&amp;A (Day 1 + Day 2)</li>
-            <li>Wealth Codes Lounge — private Zoom room</li>
-            <li>30-Day HD Replay Access</li>
-            <li>15-day money-back guarantee</li>
+            <li><strong>The Wealth Frequency Room</strong> — McKenna hypnotherapy + Vishen &amp; Regan deep dive</li>
+            <li><strong>2× Intimate Live Q&amp;A</strong> — direct access to Vishen &amp; Regan</li>
+            <li><strong>The VIP Lounge</strong> — private Zoom community + 30-day replays</li>
+            <li>15-day money-back guarantee, no questions</li>
           </ul>
         </div>
 
         <div class="vip-order-strike">$99</div>
-        <div class="vip-order-now">$49</div>
+        <div class="vip-order-now">$1</div>
         <div class="vip-order-renewal">After this page closes, Wealth Codes returns to $99</div>
 
-        <a href="#" class="vip-cta vip-cta-block vip-cta-lg">Add Wealth Codes VIP</a>
+        <a href="#" class="vip-cta vip-cta-block vip-cta-mega">UNLOCK FOR $1 NOW</a>
         <div class="vip-order-guarantee">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           15-day money-back guarantee
         </div>
       </div>
@@ -773,55 +738,55 @@
   </div>
 </section>
 
-<!-- ============= SKIP ============= -->
+<!-- SKIP -->
 <section data-name="Skip" class="pb-Container skip min-h-fit">
   <a href="#" class="vip-skip">No thanks — I'll attend the free summit only</a>
 </section>
 
-<!-- ============= FAQS ============= -->
+<!-- FAQS -->
 <section id="faq" data-name="FAQs" class="pb-Container faqs min-h-fit bg-cool-grey-150 pb-navigable">
   <div class="bg-cool-grey-150 py-10 md_py-16 min-h-fit">
     <div class="mv-container grid lg_grid-cols-5 gap-6">
       <div class="lg_col-span-2 flex flex-col space-y-2">
-        <h2 class="mv-type--title3">Frequently asked questions</h2>
+        <h2 class="mv-type--title3" style="font-weight: 800;">Quick answers.</h2>
         <div class="faq-description mv-type--body lg_block hidden">
-          <p>Browse answers about Wealth Codes VIP, the live sessions, and your access. Need more help? Email <a href="mailto:support@mindvalley.com">support@mindvalley.com</a> and we'll get back to you ASAP.</p>
+          <p>Need more? Email <a href="mailto:support@mindvalley.com">support@mindvalley.com</a>.</p>
         </div>
       </div>
       <div class="lg_col-span-3">
 
-        <details style="margin-bottom: 28px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6">Why is Wealth Codes specifically about money? Will it help with other manifestations?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+        <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Wait — $1? What's the catch?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>The summit teaches the universal method — applicable to love, health, purpose, relationships, etc. <strong>Wealth Codes goes deep on money specifically</strong> because money has its own wiring (childhood imprinting, generational patterns, scarcity programming) that other manifestations don't share. The work you do here will spill over into other domains — but the core target is wealth.</p>
+            <p>No catch. This is a tripwire — we'd rather you say yes for $1 and feel the work change you, than walk away because of price. After this page closes, Wealth Codes returns to $99 (its real price). You're getting it for $1 because you're here, right now, in the moment of decision.</p>
           </div>
         </details>
 
-        <details style="margin-bottom: 28px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6">What if I can't make the live VIP sessions?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+        <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">What if I can't make the live VIP sessions?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>Every Wealth Codes session — the Q&amp;As, the Deep Dive, the Paul McKenna hypnosis — is recorded in HD and available in your Wealth Codes Lounge for 30 days. The McKenna hypnosis works just as deeply on replay as live (your subconscious doesn't know the difference).</p>
+            <p>Every session is recorded in HD and available in your VIP Lounge for 30 days. The McKenna hypnosis works just as deeply on replay as live (your subconscious doesn't know the difference).</p>
           </div>
         </details>
 
-        <details style="margin-bottom: 28px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6">Will hypnosis work on me? I've never been hypnotised.</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+        <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Will hypnosis work on me? I've never tried it.</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>Yes. Paul McKenna has guided millions through this format — you don't have to "do" anything. You sit, you listen, your subconscious does the rest. Most VIP attendees report a felt shift the same day with deeper effects unfolding over the following 7–14 days. If anything, first-time hypnotherapy clients tend to have <em>more</em> profound shifts because there's no resistance built up.</p>
+            <p>Yes. Paul McKenna has guided millions in this exact format. You sit, you listen, your subconscious does the rest. First-time hypnotherapy clients often have <em>more</em> profound shifts because there's no resistance built up.</p>
           </div>
         </details>
 
-        <details style="margin-bottom: 28px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6">Is this only for advanced manifestors?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+        <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">Is this only for advanced manifestors?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>No. 87% of our students are beginner–intermediate. Wealth Codes is built for anyone who's tried to manifest wealth and felt it stall — whether you've been at this for 6 months or 10 years. The McKenna hypnosis works profoundly for newcomers too.</p>
+            <p>No. 87% of our students are beginner–intermediate. Wealth Codes is built for anyone who's tried to manifest wealth and felt it stall.</p>
           </div>
         </details>
 
-        <details style="margin-bottom: 28px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
-          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6">How does the 15-day refund work?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
+        <details style="margin-bottom: 22px; border-bottom: 1px solid var(--mv-grey-250); padding-bottom: 16px;">
+          <summary style="cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;"><h3 class="mv-type--title6" style="font-weight: 700;">How does the 15-day refund work?</h3><span style="font-size: 24px; color: var(--mv-brand); font-weight: 300;">+</span></summary>
           <div class="pl-8 md_pl-10 mt-3 mv-type--body text-cool-grey-600">
-            <p>Open your dashboard → click "Refund VIP." Done. The $49 returns to your card in 3–5 business days. No survey, no win-back, no question. We trust you to know whether the work landed.</p>
+            <p>Open your dashboard → click "Refund VIP." Done. The $1 returns to your card in 3–5 business days. No survey, no questions.</p>
           </div>
         </details>
 
@@ -830,13 +795,11 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="vip-footer">
   © 2026 Mindvalley · <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Refund policy</a> · <a href="mailto:support@mindvalley.com">Contact</a>
 </footer>
 
 <script>
-  // Live countdown — 15 minutes from page load
   (function() {
     var minEl = document.getElementById('cd-min');
     var secEl = document.getElementById('cd-sec');
@@ -852,8 +815,6 @@
     tick();
     setInterval(tick, 1000);
   })();
-
-  // FAQ accordion behavior
   document.querySelectorAll('details').forEach(function(d) {
     d.addEventListener('toggle', function() {
       var icon = this.querySelector('summary span:last-child');
