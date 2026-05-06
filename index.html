@@ -463,8 +463,8 @@
     <span class="countdown-units" id="countdown">
       <span class="countdown-unit">00<span class="countdown-unit-label">D</span></span>
       <span class="countdown-unit">00<span class="countdown-unit-label">H</span></span>
-      <span class="countdown-unit" id="cd-min">14<span class="countdown-unit-label">M</span></span>
-      <span class="countdown-unit" id="cd-sec">59<span class="countdown-unit-label">S</span></span>
+      <span class="countdown-unit" id="cd-min">04<span class="countdown-unit-label">M</span></span>
+      <span class="countdown-unit" id="cd-sec">00<span class="countdown-unit-label">S</span></span>
     </span>
   </div>
 </section>
@@ -757,7 +757,7 @@
 
         <div class="vip-order-strike">$99</div>
         <div class="vip-order-now">$1</div>
-        <div class="vip-order-renewal">For the next 15 minutes only · then $99</div>
+        <div class="vip-order-renewal">For the next 4 minutes only · then $99</div>
 
         <a href="#" class="vip-cta vip-cta-block vip-cta-mega">Add VIP Access for $1</a>
       </div>
@@ -850,7 +850,7 @@
     var minEl = document.getElementById('cd-min');
     var secEl = document.getElementById('cd-sec');
     if (!minEl || !secEl) return;
-    var totalSeconds = 15 * 60;
+    var totalSeconds = 4 * 60;
     function tick() {
       var m = Math.floor(totalSeconds / 60);
       var s = totalSeconds % 60;
